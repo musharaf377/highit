@@ -285,85 +285,161 @@ p {
   Footer Area CSS
 ========================*/
 .footer-section{
-  background: rgba(240, 243, 245, 1);
   padding-top: 140px;
-  background-image: url("../img/footer-bg.png");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
+  background: rgba(0, 0, 0, 1);
 }
 
 .footer-top-area {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    justify-content: space-between;
+    padding-bottom: 38px;
+    gap: 460px;
+}
+
+.footer-logo .site-logo {
+    display: block;
+    max-width: 120px;
+}
+
+.footer-logo .site-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.footer-description {
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 26px;
+    line-height: 1.5em;
+}
+
+.footer-top-right{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+/* footer Menu Column */
+.footer-column-title {
+    color: rgba(255, 255, 255, .7);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-list li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    transition: all .3s ease-in-out;
+}
+
+.footer-list li a:hover {
+    color: rgba(255, 255, 255, .7);
+}
+
+/* footer contact column */
+.footer-contact-info-list {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.footer-contact-info-list a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    transition: all .3s ease-in-out;
+}
+
+.footer-contact-info-list a:hover {
+    color: rgba(255, 255, 255, .7);
+}
+
+.contact-location {
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* footer social */
+
+.footer-middle-area {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 38px;
-    border-bottom: 1px solid rgba(223, 224, 226, 1);
+    border-top: 1px solid rgba(252, 250, 19, 0.3);
+    border-bottom: 1px solid rgba(252, 250, 19, 0.3);
+    padding: 20px 0;
+}
+
+.download-resume-link {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.download-resume-link:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.download-resume-link svg path {
+    background: rgba(252, 250, 19, 1);
+}
+
+.download-resume-link svg rect {
+    fill: rgba(252, 250, 19, 1);
+}
+
+.download-resume-link svg path {
+    fill: #000;
 }
 
 .footer-social-share {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .footer-social-share li a {
-    width: 52px;
-    height: 52px;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(247, 247, 248, 1);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     padding: 20px;
+    transition: all .3s ease-in-out;
 }
 
-ul.footer-social-share.for-mobile{
-  display: none;
+.footer-social-share li a:hover {
+    background: #fff;
 }
 
-.copyright-text.for-mobile{
-  display: none;
+.footer-social-share li a img{
+    filter: invert(0%);
+    transition: all .3s ease-in-out;
 }
 
-.footer-menu-wrapper {
-    padding-bottom: 40px;
-}
-
-.footer-menu-wrap {
-    display: flex;
-    gap: 40px;
-}
-
-.widget_nav_menu {
-    display: grid;
-    grid-template-columns: 1fr 1.6fr;
-    margin-top: 70px;
-}
-
-.footer-location-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 40px;
-    column-gap: 30px;
-}
-
-.footer-single-location h4 {
-    font-size: 24px;
-    font-weight: 500;
-    color: rgba(80, 85, 94, 1);
-    margin-bottom: 8px;
-}
-
-.footer-single-location p {
-    margin-bottom: 10px;
+.footer-social-share li a:hover img{
+    filter: invert(100%);
 }
 
 .footer-bottom-menu {
     padding: 30px 0 40px;
-    border: 1px solid rgba(223, 224, 226, 1);
-    border-left: none;
-    border-right: none;
 }
 
 .menu-about-menu-container {
@@ -376,17 +452,6 @@ ul.footer-bottom-menu-list {
     display: flex;
     align-items: center;
     gap: 20px;
-}
-
-.footer-menu-wrap .footer-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.footer-bottom-menu-list li a {
-    color: rgba(37, 45, 57, 1);
-    font-size: 14px;
 }
 
 .company-deck {

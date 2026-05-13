@@ -442,6 +442,17 @@ if (class_exists('CSF')) {
 
 			// menu repeater
 			array(
+				'type'    => 'subheading',
+				'content' => '<h3>' . esc_html__('Footer Menu', 'highit') . '</h3>'
+			),
+			array(
+				'id'      => 'footer_menu_column_title',
+				'type'    => 'text',
+				'title'   => esc_html__('Menu Column Title', 'highit'),
+				'default' => esc_html__('Menu Title', 'highit'),
+				'desc'    => wp_kses(__('you can set <mark> title</mark> for menu column', 'highit'), $allowed_html),
+			),
+			array(
 				'id'     => 'footer_menu',
 				'type'   => 'repeater',
 				'title'  => esc_html__('Footer Menu Repeater', 'highit'),
@@ -486,6 +497,13 @@ if (class_exists('CSF')) {
 				'title'   => esc_html__('Contact Email', 'highit'),
 				'default' => esc_html__('info@yourdomain.com', 'highit'),
 				'desc'    => wp_kses(__('you can set <mark> email</mark> for contact column', 'highit'), $allowed_html),
+			),
+			array(
+				'id'      => 'footer_contact_location',
+				'type'    => 'text',
+				'title'   => esc_html__('Contact Location', 'highit'),
+				'default' => esc_html__('123 Main Street, City, State 12345', 'highit'),
+				'desc'    => wp_kses(__('you can set <mark> location</mark> for contact column', 'highit'), $allowed_html),
 			),
 
 			// Download Resume
