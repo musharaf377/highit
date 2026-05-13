@@ -5,10 +5,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package highit
+ * @package highlt
  */
 
-$highit = highit();
+$highlt = highlt();
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('blog-standard-item-01 margin-bottom-30'); ?>>

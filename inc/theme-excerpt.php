@@ -2,7 +2,7 @@
 
 /**
  * Theme Excerpt
- * @package highit
+ * @package highlt
  * @since 1.0.0
  */
 
@@ -10,8 +10,8 @@ if (!defined('ABSPATH')) {
     exit(); //exit if access it directly
 }
 
-if (!class_exists('Highit_Excerpt')):
-    class Highit_Excerpt
+if (!class_exists('Highlt_Excerpt')):
+    class Highlt_Excerpt
     {
 
         public static $length = 55;
@@ -35,22 +35,22 @@ if (!class_exists('Highit_Excerpt')):
          */
         public static function length($new_length = 55, $more = true)
         {
-            Highit_Excerpt::$length = $new_length;
-            Highit_Excerpt::$more = $more;
+            Highlt_Excerpt::$length = $new_length;
+            Highlt_Excerpt::$more = $more;
 
-            add_filter('excerpt_more', 'Highit_Excerpt::auto_excerpt_more');
+            add_filter('excerpt_more', 'Highlt_Excerpt::auto_excerpt_more');
 
-            add_filter('excerpt_length', 'Highit_Excerpt::new_length');
+            add_filter('excerpt_length', 'Highlt_Excerpt::new_length');
 
-            Highit_Excerpt::output();
+            Highlt_Excerpt::output();
         }
 
         public static function new_length()
         {
-            if (isset(Highit_Excerpt::$types[Highit_Excerpt::$length]))
-                return Highit_Excerpt::$types[Highit_Excerpt::$length];
+            if (isset(Highlt_Excerpt::$types[Highlt_Excerpt::$length]))
+                return Highlt_Excerpt::$types[Highlt_Excerpt::$length];
             else
-                return Highit_Excerpt::$length;
+                return Highlt_Excerpt::$length;
         }
 
         public static function output()
@@ -61,12 +61,12 @@ if (!class_exists('Highit_Excerpt')):
         public static function continue_reading_link()
         {
 
-            return '<span class="readmore"><a href="' . esc_url(get_permalink()) . '">' . esc_html__('Read More', 'highit') . '</a></span>';
+            return '<span class="readmore"><a href="' . esc_url(get_permalink()) . '">' . esc_html__('Read More', 'highlt') . '</a></span>';
         }
 
         public static function auto_excerpt_more()
         {
-            if (Highit_Excerpt::$more) :
+            if (Highlt_Excerpt::$more) :
                 return ' ';
             else :
                 return ' ';
@@ -75,10 +75,10 @@ if (!class_exists('Highit_Excerpt')):
     } //end class
 endif;
 
-if (!function_exists('Highit_Excerpt')) {
+if (!function_exists('Highlt_Excerpt')) {
 
-    function Highit_Excerpt($length = 55, $more = true)
+    function Highlt_Excerpt($length = 55, $more = true)
     {
-        Highit_Excerpt::length($length, $more);
+        Highlt_Excerpt::length($length, $more);
     }
 }

@@ -2,7 +2,7 @@
 
 /**
  * Theme Shortcodes Generator
- * @package highit
+ * @package highlt
  * @since 1.0.0
  */
 
@@ -12,38 +12,38 @@ if (!defined('ABSPATH')) {
 
 // Control core classes for avoid errors
 if (class_exists('CSF')) {
-	$prefix = 'highit';
+	$prefix = 'highlt';
 	CSF::createShortcoder($prefix . '_shortcodes', array(
-		'button_title'   => esc_html__('Add Shortcode', 'highit'),
-		'select_title'   => esc_html__('Select a shortcode', 'highit'),
-		'insert_title'   => esc_html__('Insert Shortcode', 'highit')
+		'button_title'   => esc_html__('Add Shortcode', 'highlt'),
+		'select_title'   => esc_html__('Select a shortcode', 'highlt'),
+		'insert_title'   => esc_html__('Insert Shortcode', 'highlt')
 	));
 
 	/*------------------------------------
 		Social Icon Options
 	-------------------------------------*/
 	CSF::createSection($prefix . '_shortcodes', array(
-		'title'     => esc_html__('Social Icons', 'highit'),
+		'title'     => esc_html__('Social Icons', 'highlt'),
 		'view'      => 'group',
-		'shortcode' => 'highit_social_icon_wrap',
+		'shortcode' => 'highlt_social_icon_wrap',
 		'fields' => [
 			array(
 				'id'      => 'custom_class',
 				'type'    => 'text',
-				'title'   => esc_html__('Custom Class', 'highit'),
+				'title'   => esc_html__('Custom Class', 'highlt'),
 			)
 		],
-		'group_shortcode' => 'highit_social_icon',
+		'group_shortcode' => 'highlt_social_icon',
 		'group_fields'    => array(
 			array(
 				'id'    => 'social_icon',
 				'type'  => 'icon',
-				'title' => esc_html__('Icon', 'highit'),
+				'title' => esc_html__('Icon', 'highlt'),
 			),
 			array(
 				'id'      => 'social_link',
 				'type'    => 'text',
-				'title'   => esc_html__('URL', 'highit'),
+				'title'   => esc_html__('URL', 'highlt'),
 			)
 		)
 	));
@@ -52,20 +52,20 @@ if (class_exists('CSF')) {
 		Top Menu Options
 	-------------------------------------*/
 	CSF::createSection($prefix . '_shortcodes', array(
-		'title'     => esc_html__('Top Menu', 'highit'),
+		'title'     => esc_html__('Top Menu', 'highlt'),
 		'view'      => 'group',
-		'shortcode' => 'highit_top_menu_wrap',
-		'group_shortcode' => 'highit_top_menu',
+		'shortcode' => 'highlt_top_menu_wrap',
+		'group_shortcode' => 'highlt_top_menu',
 		'group_fields'    => array(
 			array(
 				'id'    => 'top_menu_text',
 				'type'  => 'text',
-				'title' => esc_html__('Text', 'highit'),
+				'title' => esc_html__('Text', 'highlt'),
 			),
 			array(
 				'id'      => 'top_menu_link',
 				'type'    => 'text',
-				'title'   => esc_html__('URL', 'highit'),
+				'title'   => esc_html__('URL', 'highlt'),
 			)
 		)
 	));
@@ -74,25 +74,25 @@ if (class_exists('CSF')) {
       Info Menu Options
     -------------------------------------*/
 	CSF::createSection($prefix . '_shortcodes', array(
-		'title'     => esc_html__('Info Menu', 'highit'),
+		'title'     => esc_html__('Info Menu', 'highlt'),
 		'view'      => 'group',
-		'shortcode' => 'highit_top_menu_wrap_02',
-		'group_shortcode' => 'highit_top_menu_02',
+		'shortcode' => 'highlt_top_menu_wrap_02',
+		'group_shortcode' => 'highlt_top_menu_02',
 		'group_fields'    => array(
 			array(
 				'id'    => 'top_menu_title_text',
 				'type'  => 'text',
-				'title' => esc_html__('Text', 'highit'),
+				'title' => esc_html__('Text', 'highlt'),
 			),
 			array(
 				'id'    => 'top_menu_text',
 				'type'  => 'text',
-				'title' => esc_html__('Text', 'highit'),
+				'title' => esc_html__('Text', 'highlt'),
 			),
 			array(
 				'id'      => 'top_menu_link',
 				'type'    => 'text',
-				'title'   => esc_html__('URL', 'highit'),
+				'title'   => esc_html__('URL', 'highlt'),
 			)
 		)
 	));
@@ -101,25 +101,25 @@ if (class_exists('CSF')) {
 		Inline info link options
 	-------------------------------------*/
 	CSF::createSection($prefix . '_shortcodes', array(
-		'title'     => esc_html__('Inline Info Link', 'highit'),
+		'title'     => esc_html__('Inline Info Link', 'highlt'),
 		'view'      => 'group',
-		'shortcode' => 'highit_info_item_wrap',
-		'group_shortcode' => 'highit_info_link',
+		'shortcode' => 'highlt_info_item_wrap',
+		'group_shortcode' => 'highlt_info_link',
 		'group_fields'    => array(
 			array(
 				'id'    => 'icon',
 				'type'  => 'icon',
-				'title' => esc_html__('Icon', 'highit'),
+				'title' => esc_html__('Icon', 'highlt'),
 			),
 			array(
 				'id'      => 'text',
 				'type'    => 'text',
-				'title'   => esc_html__('Text', 'highit'),
+				'title'   => esc_html__('Text', 'highlt'),
 			),
 			array(
 				'id'      => 'url',
 				'type'    => 'text',
-				'title'   => esc_html__('URL', 'highit'),
+				'title'   => esc_html__('URL', 'highlt'),
 			)
 		)
 	));

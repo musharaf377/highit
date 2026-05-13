@@ -2,14 +2,14 @@
 
 /**
  * Theme Breadcrumb 
- * @package highit
+ * @package highlt
  * @since 1.0.0
  */
 
-class Highit_Breadcrumb
+class Highlt_Breadcrumb
 {
 	/**
-	 * Array of bread Highit_Breadcrumb
+	 * Array of bread Highlt_Breadcrumb
 	 *
 	 * @var array
 	 */
@@ -49,8 +49,8 @@ class Highit_Breadcrumb
 		} else {
 			$this->defaults['blog_url'] = esc_url(home_url());
 		}
-		$this->defaults['home'] = esc_html__('Home', 'highit');
-		$this->defaults['blog'] = esc_html__('Blog', 'highit');
+		$this->defaults['home'] = esc_html__('Home', 'highlt');
+		$this->defaults['blog'] = esc_html__('Blog', 'highlt');
 
 		// Merge defaults with user passed options.
 		$this->options = array_replace_recursive($this->defaults, $options);
@@ -86,7 +86,7 @@ class Highit_Breadcrumb
 
 				// Otherwise make a span
 			} else {
-				$html .= sprintf('<span>%s</span>', wp_kses($crumb['title'], highit()->kses_allowed_html('all')));
+				$html .= sprintf('<span>%s</span>', wp_kses($crumb['title'], highlt()->kses_allowed_html('all')));
 			}
 
 			// Add seperators
@@ -105,7 +105,7 @@ class Highit_Breadcrumb
 		// close the element
 		$html .= sprintf('</%s>', $el);
 
-		echo wp_kses($html, highit()->kses_allowed_html('all'));
+		echo wp_kses($html, highlt()->kses_allowed_html('all'));
 	}
 
 	/**
@@ -116,7 +116,7 @@ class Highit_Breadcrumb
 	public function getBreadcrumbs()
 	{
 		$breadcrumbs = $this->breadcrumbs;
-		$breadcrumbs = apply_filters('highit_get_breadcrumbs', $breadcrumbs);
+		$breadcrumbs = apply_filters('highlt_get_breadcrumbs', $breadcrumbs);
 
 		return $breadcrumbs;
 	}
@@ -138,7 +138,7 @@ class Highit_Breadcrumb
 	/**
 	 * Generate the breadcrumbs
 	 *
-	 * @package highit
+	 * @package highlt
 	 */
 	public function doBreadcrumbs()
 	{
@@ -244,22 +244,22 @@ class Highit_Breadcrumb
 /**
  * Template Functions.
  */
-if (! function_exists('highit_breadcrumb')) {
+if (! function_exists('highlt_breadcrumb')) {
 	/**
 	 * Generate and display the breadcrumbs.
 	 *
 	 * @param array $options
 	 *
-	 * @package highit
+	 * @package highlt
 	 */
-	function highit_breadcrumb($options = [])
+	function highlt_breadcrumb($options = [])
 	{
-		$Crumbs = new Highit_Breadcrumb($options);
+		$Crumbs = new Highlt_Breadcrumb($options);
 		$Crumbs->theBreadcrumbs();
 	}
 }
 
-if (! function_exists('highit_get_breadcrumbs')) {
+if (! function_exists('highlt_get_breadcrumbs')) {
 	/**
 	 * Generate and return the breadcrumbs.
 	 *
@@ -267,9 +267,9 @@ if (! function_exists('highit_get_breadcrumbs')) {
 	 *
 	 * @return array
 	 */
-	function highit_get_breadcrumbs($options = [])
+	function highlt_get_breadcrumbs($options = [])
 	{
-		$Crumbs = new Highit_Breadcrumb($options);
+		$Crumbs = new Highlt_Breadcrumb($options);
 
 		return $Crumbs->getBreadcrumbs();
 	}
@@ -278,7 +278,7 @@ if (! function_exists('highit_get_breadcrumbs')) {
 /**
  * Utility functions
  */
-if (! function_exists('highit_breadcrumb_array_insert')) {
+if (! function_exists('highlt_breadcrumb_array_insert')) {
 	/**
 	 * Insert element to a specific index of the array.
 	 *
@@ -288,7 +288,7 @@ if (! function_exists('highit_breadcrumb_array_insert')) {
 	 *
 	 * @return array
 	 */
-	function highit_breadcrumb_array_insert(array $array, $element, int $position)
+	function highlt_breadcrumb_array_insert(array $array, $element, int $position)
 	{
 		// if the array is empty just add the element to it
 		if (empty($array)) {

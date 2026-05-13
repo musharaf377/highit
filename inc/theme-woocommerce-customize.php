@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Package Highit
+ * Package Highlt
  * Author Ir Tech
  * @since 1.0.1
  * */
@@ -10,8 +10,8 @@ if (! defined('ABSPATH')) {
 	exit(); //exit if access directly
 }
 
-if (! class_exists('Highit_Woocomerce_Customize')) {
-	class Highit_Woocomerce_Customize
+if (! class_exists('Highlt_Woocomerce_Customize')) {
+	class Highlt_Woocomerce_Customize
 	{
 		//$instance variable
 		private static $instance;
@@ -197,7 +197,7 @@ if (! class_exists('Highit_Woocomerce_Customize')) {
 
 			// $delivery_date = date("D d M", strtotime("+$delivery_days days"));
 
-			$delivery_date = highit_get_business_day($delivery_days);
+			$delivery_date = highlt_get_business_day($delivery_days);
 
 			if (!empty($delivery_days)) {
 ?>
@@ -249,13 +249,13 @@ if (! class_exists('Highit_Woocomerce_Customize')) {
 			global $woocommerce;
 			ob_start();
 		?>
-			<a class="highit-header-cart" href="<?php echo wc_get_cart_url(); ?>"
-				title="<?php esc_attr_e('View your shopping cart', 'highit'); ?>">
+			<a class="highlt-header-cart" href="<?php echo wc_get_cart_url(); ?>"
+				title="<?php esc_attr_e('View your shopping cart', 'highlt'); ?>">
 				<i class="fa fa-shopping-basket" aria-hidden="true"></i>
 				<span class="cart-badge"><?php echo sprintf('%d', WC()->cart->get_cart_contents_count()); ?></span>
 			</a>
 		<?php
-			$fragments['a.highit-header-cart'] = ob_get_clean();
+			$fragments['a.highlt-header-cart'] = ob_get_clean();
 
 			return $fragments;
 		}
@@ -288,7 +288,7 @@ if (! class_exists('Highit_Woocomerce_Customize')) {
 		 * */
 		public function wc_product_post_class($class)
 		{
-			$class[] = is_product() ? 'highit-product-single-page-item' : 'highit-single-product-item';
+			$class[] = is_product() ? 'highlt-product-single-page-item' : 'highlt-single-product-item';
 
 			return $class;
 		}
@@ -311,7 +311,7 @@ if (! class_exists('Highit_Woocomerce_Customize')) {
 		public function woocommerce_before_shop_loop_item_ul_start()
 		{
 			?>
-				<ul class="highit-thumb-inner-item-list">
+				<ul class="highlt-thumb-inner-item-list">
 				<?php
 			}
 
@@ -327,7 +327,7 @@ if (! class_exists('Highit_Woocomerce_Customize')) {
 						$args = ['quantity', 'class', 'attributes', 'icon' => '<i class="fas fa-shopping-cart"></i>'];
 						global $product;
 						echo apply_filters(
-							'highit_woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
+							'highlt_woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
 							sprintf(
 								'<a href="%s" data-quantity="%s" data-product_id="%s" data-product_sku="%s" class="%s" %s>%s</a>',
 								esc_url($product->add_to_cart_url()),
@@ -336,7 +336,7 @@ if (! class_exists('Highit_Woocomerce_Customize')) {
 								$product->get_sku(),
 								esc_attr(isset($args['class']) ? $args['class'] : 'button add_to_cart_button ajax_add_to_cart'),
 								isset($args['attributes']) ? wc_implode_html_attributes($args['attributes']) : '',
-								wp_kses($args['icon'], Highit()->kses_allowed_html('all'))
+								wp_kses($args['icon'], Highlt()->kses_allowed_html('all'))
 							),
 							$product,
 							$args
@@ -367,7 +367,7 @@ if (! class_exists('Highit_Woocomerce_Customize')) {
 								$product->get_sku(),
 								esc_attr(isset($args['class']) ? $args['class'] : 'button add_to_cart_button yith-wcqv-button'),
 								isset($args['attributes']) ? wc_implode_html_attributes($args['attributes']) : '',
-								wp_kses($args['icon'], Highit()->kses_allowed_html('all'))
+								wp_kses($args['icon'], Highlt()->kses_allowed_html('all'))
 							),
 							$product,
 							$args
@@ -492,7 +492,7 @@ if (! class_exists('Highit_Woocomerce_Customize')) {
 			}
 		} //end class
 
-		if (class_exists('Highit_Woocomerce_Customize')) {
-			Highit_Woocomerce_Customize::getInstance();
+		if (class_exists('Highlt_Woocomerce_Customize')) {
+			Highlt_Woocomerce_Customize::getInstance();
 		}
 	}

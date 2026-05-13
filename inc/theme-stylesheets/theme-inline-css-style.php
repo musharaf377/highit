@@ -2,7 +2,7 @@
 
 /**
  * Theme Inline Style
- * @package highit
+ * @package highlt
  * @since 1.0.0
  */
 
@@ -14,17 +14,17 @@ if (!defined('ABSPATH')) {
  * Theme Inline CSS
  * @since 1.0.0
  * */
-global $highit_inline_css;
-$backend = highit();
-$highit_inline_css = '';
-$prefix = 'highit';
+global $highlt_inline_css;
+$backend = highlt();
+$highlt_inline_css = '';
+$prefix = 'highlt';
 ob_start();
 
 /*-----------------------------
 	Page options
 ------------------------------*/
-$page_id = highit()->page_id();
-$page_meta = Highit_Group_Fields_Value::page_container('highit', 'container_options');
+$page_id = highlt()->page_id();
+$page_meta = Highlt_Group_Fields_Value::page_container('highlt', 'container_options');
 $page_layout_meta = get_post_meta($page_id, $prefix . '_page_container_options', true);
 
 $page_bg_color = isset($page_layout_meta['page_bg_color']) && $page_layout_meta['page_bg_color'] ? $page_layout_meta['page_bg_color'] : '#ffffff';
@@ -73,4 +73,4 @@ if ($page_content_spacing) {
 CSS;
 }
 
-$highit_inline_css = ob_get_clean();
+$highlt_inline_css = ob_get_clean();

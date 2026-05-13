@@ -5,15 +5,15 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package highit
+ * @package highlt
  */
 
 get_header();
-$highit = highit();
-$page_layout_meta = Highit_Group_Fields_Value::page_layout_options('blog_single');
+$highlt = highlt();
+$page_layout_meta = Highlt_Group_Fields_Value::page_layout_options('blog_single');
 $full_width_class = $page_layout_meta['content_column_class'] === 'col-lg-12' ? ' full-width-content ' : '';
-if ($highit->is_highit_core_active()) {
-    highit_core()->setPostViews(get_the_ID());
+if ($highlt->is_highlt_core_active()) {
+    highlt_core()->setPostViews(get_the_ID());
 }
 ?>
 <div id="primary" class="content-area blog-content-page padding-bottom-120 padding-top-25 <?php echo esc_attr($full_width_class); ?>">

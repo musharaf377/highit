@@ -2,14 +2,14 @@
 
 /**
  * Theme Options Style
- * @package highit
+ * @package highlt
  * @since 1.0.0
  */
 
 if (!defined('ABSPATH')) {
     exit(); //exit if access directly
 }
-$highit = highit();
+$highlt = highlt();
 global $theme_customize_css;
 $theme_customize_css = '';
 
@@ -26,15 +26,15 @@ $body_font['family'] = (isset($body_font['font-family']) && !empty($body_font['f
 $body_font['weight'] = (isset($body_font['font-weight']) && !empty($body_font['font-weight'])) ? $body_font['font-weight'] : '400';
 $body_font['size'] = (isset($body_font['font-size']) && !empty($body_font['font-size'])) ? $body_font['font-size'] : '16px';
 
-$typography_css = $highit->generate_css_code([
+$typography_css = $highlt->generate_css_code([
     'font-family' => $body_font['family'] . ', sans-serif'
 ], 'html,body');
 
-$typography_css .= $highit->generate_css_code([
-    'font-size' => $highit->sanitize_px($body_font['size']),
+$typography_css .= $highlt->generate_css_code([
+    'font-size' => $highlt->sanitize_px($body_font['size']),
     'font-weight' => $body_font['weight']
 ], 'p,body');
-$typography_css .= $highit->generate_css_code([
+$typography_css .= $highlt->generate_css_code([
     '--body-font' => $body_font['family'] . ', sans-serif'
 ], ':root');
 
@@ -56,7 +56,7 @@ $heading_font_variant = cs_get_option('heading_font_variant') ? cs_get_option('h
 $heading_font['family'] = (isset($heading_font['font-family']) && !empty($heading_font['font-family'])) ? $heading_font['font-family'] : 'PP Fragment';
 $heading_font['weight'] = (isset($heading_font['font-weight']) && !empty($heading_font['font-weight'])) ? $heading_font['font-weight'] : '700';
 
-$heading_font_css = $highit->generate_css_code([
+$heading_font_css = $highlt->generate_css_code([
     'font-family' => $heading_font['family'] . ', sans-serif',
     'font-weight' => $heading_font['weight']
 ], [
@@ -68,11 +68,11 @@ $heading_font_css = $highit->generate_css_code([
     'h6'
 ]);
 
-$heading_font_css .= $highit->generate_css_code([
+$heading_font_css .= $highlt->generate_css_code([
     '--heading-font' => $heading_font['family'] . ', sans-serif'
 ], ':root');
 
-$body_font_css = $highit->generate_css_code([
+$body_font_css = $highlt->generate_css_code([
     '--heading-font' => $body_font['family'] . ', sans-serif'
 ], ':root');
 
@@ -96,7 +96,7 @@ $secondary_color = cs_get_customize_option('secondary_color');
 $heading_color = cs_get_customize_option('heading_color');
 $paragraph_color = cs_get_customize_option('paragraph_color');
 
-$root_color_css = $highit->generate_css_code([
+$root_color_css = $highlt->generate_css_code([
     '--main-color-one' => $main_color,
     '--main-color-two' => $main_color_two,
     '--secondary-color' => $secondary_color,
@@ -113,7 +113,7 @@ CSS;
 	Preloader
 ---------------------------------*/
 $preloader_bg_color = cs_get_option('preloader_bg_color');
-$preloader_css = $highit->generate_css_code([
+$preloader_css = $highlt->generate_css_code([
     'background-color' => $preloader_bg_color
 ], '.preloader-inner');
 echo <<<CSS
@@ -131,7 +131,7 @@ $breadcrumb_bg_image_repeat = isset($breadcrumb_bg['background-repeat']) && !emp
 $breadcrumb_bg_image_attachment = isset($breadcrumb_bg['background-attachment']) && !empty($breadcrumb_bg['background-attachment']) ? $breadcrumb_bg['background-attachment'] : 'scroll';
 $breadcrumb_bg_color = cs_get_option('breadcrumb_bg_color');
 
-$breadcrumb_css = $highit->generate_css_code([
+$breadcrumb_css = $highlt->generate_css_code([
 
     'background-image' => 'url(' . $breadcrumb_bg_image . ')',
     'background-position' => $breadcrumb_bg_image_position,
@@ -140,7 +140,7 @@ $breadcrumb_css = $highit->generate_css_code([
     'background-attachment' => $breadcrumb_bg_image_attachment,
 
 ], '.breadcrumb-wrap');
-$breadcrumb_css .= $highit->generate_css_code([
+$breadcrumb_css .= $highlt->generate_css_code([
     'background-color' => $breadcrumb_bg_color,
 ], '.breadcrumb-wrap:before');
 
@@ -154,11 +154,11 @@ CSS;
 $footer_spacing = cs_get_switcher_option('footer_spacing');
 $footer_top_spacing = cs_get_option('footer_top_spacing');
 $footer_bottom_spacing = cs_get_option('footer_bottom_spacing');
-$footer_padding_top = !empty($footer_top_spacing) ? $highit->sanitize_px($footer_top_spacing) : '';
-$footer_padding_bottom = !empty($footer_bottom_spacing) ? $highit->sanitize_px($footer_bottom_spacing) : '';
+$footer_padding_top = !empty($footer_top_spacing) ? $highlt->sanitize_px($footer_top_spacing) : '';
+$footer_padding_bottom = !empty($footer_bottom_spacing) ? $highlt->sanitize_px($footer_bottom_spacing) : '';
 
 
-$footer_css = $highit->generate_css_code([
+$footer_css = $highlt->generate_css_code([
     'padding-top' => $footer_padding_top,
     'padding-bottom' => $footer_padding_bottom
 ], '.footer-style .footer-wrap .footer-top');
@@ -175,10 +175,10 @@ CSS;
 $copyright_area_spacing = cs_get_switcher_option('copyright_area_spacing');
 $copyright_area_top_spacing = cs_get_option('copyright_area_top_spacing');
 $copyright_area_bottom_spacing = cs_get_option('copyright_area_bottom_spacing');
-$copyright_padding_top = !empty($copyright_area_top_spacing) ? $highit->sanitize_px($copyright_area_top_spacing) : '';
-$copyright_padding_bottom = !empty($copyright_area_bottom_spacing) ? $highit->sanitize_px($copyright_area_bottom_spacing) : '';
+$copyright_padding_top = !empty($copyright_area_top_spacing) ? $highlt->sanitize_px($copyright_area_top_spacing) : '';
+$copyright_padding_bottom = !empty($copyright_area_bottom_spacing) ? $highlt->sanitize_px($copyright_area_bottom_spacing) : '';
 
-$copyright_css = $highit->generate_css_code([
+$copyright_css = $highlt->generate_css_code([
     'padding-top' => $copyright_padding_top,
     'padding-bottom' => $copyright_padding_bottom
 ], '.footer-wrap .copyright-wrap');
@@ -201,14 +201,14 @@ $header_01_dropdown_border_color = cs_get_customize_option('header_01_dropdown_b
 $header_01_dropdown_hover_bg_color = cs_get_customize_option('header_01_dropdown_hover_bg_color');
 $header_01_dropdown_hover_color = cs_get_customize_option('header_01_dropdown_hover_color');
 
-$header_one_css = $highit->generate_css_code([
+$header_one_css = $highlt->generate_css_code([
     'color' => $header_01_nav_bar_color
 ], [
     '.navbar.navbar-area.navbar-expand-lg.navigation-style-01.navbar-default .custom-container .navbar-collapse .navbar-nav li a',
     '.navbar.navbar-area.navbar-expand-lg.navigation-style-01.navbar-default .custom-container .navbar-collapse .navbar-nav li.menu-item-has-children:before'
 ]);
 
-$header_one_css .= $highit->generate_css_code([
+$header_one_css .= $highlt->generate_css_code([
     'color' => $header_01_nav_bar_hover_color
 ], [
     '.navbar.navbar-area.navbar-expand-lg.navigation-style-01.navbar-default .custom-container .navbar-collapse .navbar-nav li a:hover',
@@ -216,21 +216,21 @@ $header_one_css .= $highit->generate_css_code([
     '.navbar.navbar-area.navbar-expand-lg.navigation-style-01.navbar-default .custom-container .navbar-collapse .navbar-nav li:hover.menu-item-has-children:before'
 ]);
 
-$header_one_css .= $highit->generate_css_code([
+$header_one_css .= $highlt->generate_css_code([
     'background-color' => $header_01_nav_bar_bg_color
 ], '.navbar.navbar-area.navbar-expand-lg.navigation-style-01.navbar-default,.navbar.navbar-area.navbar-expand-lg.navigation-style-01.navbar-default .custom-container');
 
-$header_one_css .= $highit->generate_css_code([
+$header_one_css .= $highlt->generate_css_code([
     'background-color' => $header_01_dropdown_bg_color,
     'color' => $header_01_dropdown_color,
 ], '.navbar.navbar-area.navbar-expand-lg.navigation-style-01.navbar-default .custom-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li a');
 
-$header_one_css .= $highit->generate_css_code([
+$header_one_css .= $highlt->generate_css_code([
     'background-color' => $header_01_dropdown_hover_bg_color,
     'color' => $header_01_dropdown_hover_color,
 ], '.navbar.navbar-area.navbar-expand-lg.navigation-style-01.navbar-default .custom-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li:hover a');
 
-$header_one_css .= $highit->generate_css_code(
+$header_one_css .= $highlt->generate_css_code(
     [
         'color' => $header_01_nav_bar_hover_color,
     ],
@@ -241,7 +241,7 @@ $header_one_css .= $highit->generate_css_code(
     ]
 );
 
-$header_one_css .= $highit->generate_css_code([
+$header_one_css .= $highlt->generate_css_code([
     'border-bottom-color' => $header_01_dropdown_border_color,
 ], '.navbar-area.navbar-default .custom-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu');
 
@@ -258,20 +258,20 @@ $widget_title_color = cs_get_customize_option('sidebar_widget_title_color');
 $widget_text_color = cs_get_customize_option('sidebar_widget_text_color');
 $sidebar_widget_title_bottom_border_color = cs_get_customize_option('sidebar_widget_title_bottom_border_color');
 
-$sidebar_css = $highit->generate_css_code([
+$sidebar_css = $highlt->generate_css_code([
     'color' => $widget_title_color,
 ], [
     '.widget .widget-headline.style-01',
     '.widget_rss ul li a.rsswidget'
 ]);
 
-$sidebar_css .= $highit->generate_css_code([
+$sidebar_css .= $highlt->generate_css_code([
     'background-color' => $sidebar_widget_title_bottom_border_color
 ], [
     '.widget .widget-headline:after'
 ]);
 
-$sidebar_css .= $highit->generate_css_code([
+$sidebar_css .= $highlt->generate_css_code([
     'color' => $widget_text_color
 ], [
     '.widget ul li a',
@@ -303,15 +303,15 @@ $footer_widget_tag_border_color = cs_get_customize_option('footer_widget_tag_bor
 $copyright_area_bg_color = cs_get_customize_option('copyright_area_bg_color');
 $copyright_area_text_color = cs_get_customize_option('copyright_area_text_color');
 
-$footer_css = $highit->generate_css_code([
+$footer_css = $highlt->generate_css_code([
     'background-color' => $footer_area_bg_color
 ], ['.footer-style .footer-wrap']);
 
-$footer_css .= $highit->generate_css_code([
+$footer_css .= $highlt->generate_css_code([
     'border-bottom-color' => $footer_area_bottom_border_color
 ], ['.footer-style .footer-wrap .footer-top']);
 
-$footer_css .= $highit->generate_css_code([
+$footer_css .= $highlt->generate_css_code([
     'color' => $footer_widget_text_color
 ], [
     '.widget.footer-widget p',
@@ -326,7 +326,7 @@ $footer_css .= $highit->generate_css_code([
     '.widget_tag_cloud.footer-widget .tagcloud a'
 ]);
 
-$footer_css .= $highit->generate_css_code([
+$footer_css .= $highlt->generate_css_code([
     'color' => $footer_widget_text_hover_color
 ], [
     '.footer-widget.widget a:hover',
@@ -334,7 +334,7 @@ $footer_css .= $highit->generate_css_code([
     '.widget_tag_cloud.footer-widget .tagcloud a:hover'
 ]);
 
-$footer_css .= $highit->generate_css_code([
+$footer_css .= $highlt->generate_css_code([
     'color' => $footer_widget_title_color
 ], [
     '.widget.footer-widget .widget-headline',
@@ -343,17 +343,17 @@ $footer_css .= $highit->generate_css_code([
     '.footer-widget.widget .theme-recent-post-wrap li.theme-recent-post-item .content .title>a'
 ]);
 
-$footer_css .= $highit->generate_css_code([
+$footer_css .= $highlt->generate_css_code([
     'color' => $footer_widget_tag_color,
     'background-color' => $footer_widget_tag_bg_color,
     'border-color' => $footer_widget_tag_border_color
 ], ['.footer-widget.widget_tag_cloud .tagcloud a:hover']);
 
-$copyright_css = $highit->generate_css_code([
+$copyright_css = $highlt->generate_css_code([
     'background-color' => $copyright_area_bg_color
 ], '.footer-style .footer-wrap .copyright-wrap');
 
-$copyright_css .= $highit->generate_css_code([
+$copyright_css .= $highlt->generate_css_code([
     'color' => $copyright_area_text_color
 ], '.footer-style .copyright-wrap .copyright-content');
 
@@ -372,10 +372,10 @@ CSS;
 $error_page_bg_color = cs_get_option('404_bg_color');
 $err_404_spacing_top = cs_get_option('404_spacing_top');
 $err_404_spacing_bottom = cs_get_option('404_spacing_bottom');
-$err_padding_top = !empty($err_404_spacing_top) ? $highit->sanitize_px($err_404_spacing_top) : '';
-$err_padding_bottom = !empty($err_404_spacing_bottom) ? $highit->sanitize_px($err_404_spacing_bottom) : '';
+$err_padding_top = !empty($err_404_spacing_top) ? $highlt->sanitize_px($err_404_spacing_top) : '';
+$err_padding_bottom = !empty($err_404_spacing_bottom) ? $highlt->sanitize_px($err_404_spacing_bottom) : '';
 
-$error_css = $highit->generate_css_code([
+$error_css = $highlt->generate_css_code([
     'background-color' => $error_page_bg_color,
     'padding-top' => $err_padding_top,
     'padding-bottom' => $err_padding_bottom
@@ -390,10 +390,10 @@ CSS;
 $blog_page_bg_color = cs_get_option('blog_bg_color');
 $blog_page_spacing_top = cs_get_option('blog_spacing_top');
 $blog_page_spacing_bottom = cs_get_option('blog_spacing_bottom');
-$blog_padding_top = !empty($blog_page_spacing_top) ? $highit->sanitize_px($blog_page_spacing_top) : '';
-$blog_padding_bottom = !empty($blog_page_spacing_bottom) ? $highit->sanitize_px($blog_page_spacing_bottom) : '';
+$blog_padding_top = !empty($blog_page_spacing_top) ? $highlt->sanitize_px($blog_page_spacing_top) : '';
+$blog_padding_bottom = !empty($blog_page_spacing_bottom) ? $highlt->sanitize_px($blog_page_spacing_bottom) : '';
 
-$blog_css = $highit->generate_css_code([
+$blog_css = $highlt->generate_css_code([
     'background-color' => $blog_page_bg_color,
     'padding-top' => $blog_padding_top,
     'padding-bottom' => $blog_padding_bottom
@@ -408,10 +408,10 @@ CSS;
 $blog_single_page_bg_color = cs_get_option('blog_single_bg_color');
 $blog_single_page_spacing_top = cs_get_option('blog_single_spacing_top');
 $blog_single_page_spacing_bottom = cs_get_option('blog_single_spacing_bottom');
-$blog_single_padding_top = !empty($blog_single_page_spacing_top) ? $highit->sanitize_px($blog_single_page_spacing_top) : '';
-$blog_single_padding_bottom = !empty($blog_single_page_spacing_bottom) ? $highit->sanitize_px($blog_single_page_spacing_bottom) : '';
+$blog_single_padding_top = !empty($blog_single_page_spacing_top) ? $highlt->sanitize_px($blog_single_page_spacing_top) : '';
+$blog_single_padding_bottom = !empty($blog_single_page_spacing_bottom) ? $highlt->sanitize_px($blog_single_page_spacing_bottom) : '';
 
-$blog_single_css = $highit->generate_css_code([
+$blog_single_css = $highlt->generate_css_code([
     'background-color' => $blog_single_page_bg_color,
     'padding-top' => $blog_single_padding_top,
     'padding-bottom' => $blog_single_padding_bottom
@@ -428,10 +428,10 @@ CSS;
 $archive_page_bg_color = cs_get_option('archive_bg_color');
 $archive_page_spacing_top = cs_get_option('archive_spacing_top');
 $archive_page_spacing_bottom = cs_get_option('archive_spacing_bottom');
-$archive_single_padding_top = !empty($archive_page_spacing_top) ? $highit->sanitize_px($archive_page_spacing_top) : '';
-$archive_single_padding_bottom = !empty($archive_page_spacing_bottom) ? $highit->sanitize_px($archive_page_spacing_bottom) : '';
+$archive_single_padding_top = !empty($archive_page_spacing_top) ? $highlt->sanitize_px($archive_page_spacing_top) : '';
+$archive_single_padding_bottom = !empty($archive_page_spacing_bottom) ? $highlt->sanitize_px($archive_page_spacing_bottom) : '';
 
-$archive_page_css = $highit->generate_css_code([
+$archive_page_css = $highlt->generate_css_code([
     'background-color' => $archive_page_bg_color,
     'padding-top' => $archive_single_padding_top,
     'padding-bottom' => $archive_single_padding_bottom
@@ -447,10 +447,10 @@ CSS;
 $search_page_bg_color = cs_get_option('search_bg_color');
 $search_page_spacing_top = cs_get_option('search_spacing_top');
 $search_page_spacing_bottom = cs_get_option('search_spacing_bottom');
-$search_single_padding_top = !empty($search_page_spacing_top) ? $highit->sanitize_px($search_page_spacing_top) : '';
-$search_single_padding_bottom = !empty($search_page_spacing_bottom) ? $highit->sanitize_px($search_page_spacing_bottom) : '';
+$search_single_padding_top = !empty($search_page_spacing_top) ? $highlt->sanitize_px($search_page_spacing_top) : '';
+$search_single_padding_bottom = !empty($search_page_spacing_bottom) ? $highlt->sanitize_px($search_page_spacing_bottom) : '';
 
-$search_page_css = $highit->generate_css_code([
+$search_page_css = $highlt->generate_css_code([
     'background-color' => $search_page_bg_color,
     'padding-top' => $search_single_padding_top,
     'padding-bottom' => $search_single_padding_bottom
@@ -466,10 +466,10 @@ CSS;
 $service_single_page_bg_color = cs_get_option('service_single_bg_color');
 $service_single_page_spacing_top = cs_get_option('service_single_spacing_top');
 $service_single_page_spacing_bottom = cs_get_option('service_single_spacing_bottom');
-$search_single_padding_top = !empty($service_single_page_spacing_top) ? $highit->sanitize_px($service_single_page_spacing_top) : '';
-$search_single_padding_bottom = !empty($service_single_page_spacing_bottom) ? $highit->sanitize_px($service_single_page_spacing_bottom) : '';
+$search_single_padding_top = !empty($service_single_page_spacing_top) ? $highlt->sanitize_px($service_single_page_spacing_top) : '';
+$search_single_padding_bottom = !empty($service_single_page_spacing_bottom) ? $highlt->sanitize_px($service_single_page_spacing_bottom) : '';
 
-$service_single_page_css = $highit->generate_css_code([
+$service_single_page_css = $highlt->generate_css_code([
     'background-color' => $service_single_page_bg_color,
     'padding-top' => $search_single_padding_top,
     'padding-bottom' => $search_single_padding_bottom

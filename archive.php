@@ -15,13 +15,13 @@
  * 
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package highit
+ * @package highlt
  */
 
 
 
 get_header();
-$page_layout_options = Highit_Group_Fields_Value::page_layout_options('archive');
+$page_layout_options = Highlt_Group_Fields_Value::page_layout_options('archive');
 ?>
 
 <div id="primary" class="content-area archive-page-content-area padding-120">
@@ -46,7 +46,7 @@ $page_layout_options = Highit_Group_Fields_Value::page_layout_options('archive')
                         endwhile;
                         ?>
                         <div class="blog-pagination">
-                            <?php highit()->post_pagination(); ?>
+                            <?php highlt()->post_pagination(); ?>
                         </div>
 
                     <?php

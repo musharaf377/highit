@@ -2,7 +2,7 @@
 
 
 
-function highit_get_svg_icon($icon)
+function highlt_get_svg_icon($icon)
 {
     $svg_icon = array(
         'right_arrow' => '<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">

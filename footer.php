@@ -7,10 +7,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package highit
+ * @package highlt
  */
 
-$page_container_meta = Highit_Group_Fields_Value::page_container('highit', 'header_options');
+$page_container_meta = Highlt_Group_Fields_Value::page_container('highlt', 'header_options');
 ?>
 
 </div><!-- #content -->

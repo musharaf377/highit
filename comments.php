@@ -8,7 +8,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package highit
+ * @package highlt
  */
 
 /*
@@ -29,18 +29,18 @@ if (post_password_required()) {
     ?>
         <h2 class="comments-title">
             <?php
-            $highit_comment_count = get_comments_number();
-            if ('1' === $highit_comment_count) {
+            $highlt_comment_count = get_comments_number();
+            if ('1' === $highlt_comment_count) {
                 printf(
                     /* translators: 1: title. */
-                    esc_html__('1 Comment', 'highit')
+                    esc_html__('1 Comment', 'highlt')
 
                 );
             } else {
                 printf( // WPCS: XSS OK.
                     /* translators: 1: comment count number, 2: title. */
-                    esc_html(_nx('%1$s Comments &ldquo;%2$s&rdquo;', '%1$s Comments ', $highit_comment_count, 'comments title', 'highit')),
-                    number_format_i18n($highit_comment_count)
+                    esc_html(_nx('%1$s Comments &ldquo;%2$s&rdquo;', '%1$s Comments ', $highlt_comment_count, 'comments title', 'highlt')),
+                    number_format_i18n($highlt_comment_count)
                 );
             }
             ?>
@@ -54,7 +54,7 @@ if (post_password_required()) {
             <?php
             wp_list_comments(array(
                 'style' => 'ul',
-                'callback' => 'highit_comment_modification',
+                'callback' => 'highlt_comment_modification',
                 'short_ping' => true,
             ));
             ?>
@@ -66,35 +66,35 @@ if (post_password_required()) {
         // If comments are closed and there are comments, let's leave a little note, shall we?
         if (!comments_open()) :
         ?>
-            <p class="no-comments"><?php esc_html_e('Comments are closed.', 'highit'); ?></p>
+            <p class="no-comments"><?php esc_html_e('Comments are closed.', 'highlt'); ?></p>
     <?php
         endif;
 
     endif; // Check for have_comments().
     $fields = array(
         'author' => ' <div class="form-group">
-                        <input type="text" id="author" name="author" tabindex="1" value="' . esc_attr($commenter['comment_author']) . '" class="form-control" placeholder="' . esc_attr__('Name', 'highit') . '">
+                        <input type="text" id="author" name="author" tabindex="1" value="' . esc_attr($commenter['comment_author']) . '" class="form-control" placeholder="' . esc_attr__('Name', 'highlt') . '">
                     </div>',
         'email' => ' <div class="form-group">
-                        <input type="email" class="form-control" name="email" id="email" value="' . esc_attr($commenter['comment_author_email']) . '" tabindex="2" placeholder="' . esc_attr__('Email', 'highit') . '">
+                        <input type="email" class="form-control" name="email" id="email" value="' . esc_attr($commenter['comment_author_email']) . '" tabindex="2" placeholder="' . esc_attr__('Email', 'highlt') . '">
                     </div>',
         'URL' => '<div class="form-group">
-                        <input type="text" id="url" name="url" value="' . esc_url($commenter['comment_author_url']) . '" class="form-control" tabindex="3" placeholder="' . esc_attr__('Subject', 'highit') . '">
+                        <input type="text" id="url" name="url" value="' . esc_url($commenter['comment_author_url']) . '" class="form-control" tabindex="3" placeholder="' . esc_attr__('Subject', 'highlt') . '">
                     </div>'
     );
     comment_form(array(
         'fields' => apply_filters('comment_form_default_fields', $fields),
         'comment_notes_before' => '',
         'comment_notes_after' => '',
-        'title_reply' => esc_html__('Leave A Comment', 'highit'),
-        'title_reply_to' => esc_html__('Leave A Reply To %s', 'highit'),
+        'title_reply' => esc_html__('Leave A Comment', 'highlt'),
+        'title_reply_to' => esc_html__('Leave A Reply To %s', 'highlt'),
         'id_form' => 'commentform',
         'id_submit' => 'submit',
         'cancel_reply_link' => '<i class="fas fa-times" aria-hidden="true"></i>',
         'class_submit' => 'submit-btn',
-        'label_submit' => esc_html__('Post Comment', 'highit'),
+        'label_submit' => esc_html__('Post Comment', 'highlt'),
         'comment_field' => '<div class="form-group textarea">
-                                <textarea name="comment" id="comment" class="form-control" placeholder="' . esc_attr__('Comment...', 'highit') . '" cols="30" rows="10"></textarea>
+                                <textarea name="comment" id="comment" class="form-control" placeholder="' . esc_attr__('Comment...', 'highlt') . '" cols="30" rows="10"></textarea>
                             </div>'
     ));
     ?>

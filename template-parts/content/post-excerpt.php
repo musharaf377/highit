@@ -2,17 +2,17 @@
 
 /**
  * Theme Post excerpt Template
- * @package highit
+ * @package highlt
  * @since 1.0.0
  */
 
-$highit = highit();
-$post_meta = Highit_Group_Fields_Value::post_meta('blog_post');
+$highlt = highlt();
+$post_meta = Highlt_Group_Fields_Value::post_meta('blog_post');
 $excerpt_length = !empty($post_meta['excerpt_length']) ? $post_meta['excerpt_length'] : 55;
-$readmore_text = !empty($post_meta['readmore_btn_text']) ? $post_meta['readmore_btn_text'] : esc_html__('Read More', 'highit');
+$readmore_text = !empty($post_meta['readmore_btn_text']) ? $post_meta['readmore_btn_text'] : esc_html__('Read More', 'highlt');
 
 
-Highit_Excerpt($excerpt_length);
+Highlt_Excerpt($excerpt_length);
 ?>
 <div class="blog-bottom">
 	<?php

@@ -2,7 +2,7 @@
 
 /**
  * Theme Default Header
- * @package highit
+ * @package highlt
  * @since 1.0.0
  */
 ?>
@@ -24,8 +24,8 @@
                     }
                     ?>
                 </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#highit_main_menu"
-                    aria-expanded="false" aria-label="<?php  //esc_attr__('Toggle navigation', 'highit') 
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#highlt_main_menu"
+                    aria-expanded="false" aria-label="<?php  //esc_attr__('Toggle navigation', 'highlt') 
                                                         ?>">
                     <span class="navbar-toggler-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +35,7 @@
                 </button>
             </div>
 
-            <div id="highit_main_menu" class="collapse navbar-collapse">
+            <div id="highlt_main_menu" class="collapse navbar-collapse">
                 <?php
                 wp_nav_menu(array(
                     'theme_location' => 'main-menu',
@@ -53,7 +53,7 @@
                     <span></span>
                     <a class="contact-btn" href="#">
                         <p>Contact Us</p>
-                        <?php echo highit_get_svg_icon('right_arrow'); ?>
+                        <?php echo highlt_get_svg_icon('right_arrow'); ?>
                     </a>    
                 </div>
             </div>

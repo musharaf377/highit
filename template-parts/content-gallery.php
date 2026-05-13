@@ -5,11 +5,11 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package highit
+ * @package highlt
  */
 
-$highit = highit();
-$post_meta = get_post_meta(get_the_ID(), 'highit_post_gallery_options', true);
+$highlt = highlt();
+$post_meta = get_post_meta(get_the_ID(), 'highlt_post_gallery_options', true);
 $post_meta_gallery = isset($post_meta['gallery_images']) && !empty($post_meta['gallery_images']) ? $post_meta['gallery_images'] : '';
 $gallery_image = explode(',', $post_meta_gallery);
 ?>
@@ -19,12 +19,12 @@ $gallery_image = explode(',', $post_meta_gallery);
     <?php
     if (isset($post_meta['gallery_images']) && !empty($post_meta['gallery_images'])):
     ?>
-        <div id="highit_post_gallery" class="carousel slide thumbnail" data-ride="carousel">
+        <div id="highlt_post_gallery" class="carousel slide thumbnail" data-ride="carousel">
             <ol class="carousel-indicators">
                 <?php
                 for ($i = 0; $i < count($gallery_image); $i++) {
                     $class = 0 == $i ? 'active' : '';
-                    printf('<li data-target="#highit_post_gallery" data-slide-to="%2$s" class="%1$s"></li>', esc_attr($i), esc_attr($class));
+                    printf('<li data-target="#highlt_post_gallery" data-slide-to="%2$s" class="%1$s"></li>', esc_attr($i), esc_attr($class));
                 }
                 ?>
             </ol>
@@ -33,7 +33,7 @@ $gallery_image = explode(',', $post_meta_gallery);
 
                 for ($i = 0; $i < count($gallery_image); $i++):
                     $class = 0 == $i ? 'active' : '';
-                    $img_src = wp_get_attachment_image_src($gallery_image[$i], 'highit_classic');
+                    $img_src = wp_get_attachment_image_src($gallery_image[$i], 'highlt_classic');
                     $img_alt = get_post_meta($gallery_image[$i], 'wp_attachment_image_alt', true);
                 ?>
                     <div class="carousel-item <?php echo esc_attr($class); ?>">
@@ -41,10 +41,10 @@ $gallery_image = explode(',', $post_meta_gallery);
                     </div>
                 <?php endfor; ?>
             </div>
-            <a class="carousel-control-prev" href="#highit_post_gallery" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#highlt_post_gallery" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             </a>
-            <a class="carousel-control-next" href="#highit_post_gallery" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#highlt_post_gallery" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </a>
         </div>
@@ -53,7 +53,7 @@ $gallery_image = explode(',', $post_meta_gallery);
         if (has_post_thumbnail()):
         ?>
             <div class="thumbnail">
-                <?php $highit->post_thumbnail(); ?>
+                <?php $highlt->post_thumbnail(); ?>
             </div>
     <?php
         endif;

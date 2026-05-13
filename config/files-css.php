@@ -3,7 +3,7 @@
 $css_files = array(
     array(
         'handle' => 'bootstrap',
-        'src' => HIGHIT_CSS . '/bootstrap.min.css',
+        'src' => HIGHLT_CSS . '/bootstrap.min.css',
         'deps' => array(),
     ),
     array(
@@ -12,13 +12,13 @@ $css_files = array(
         'deps' => array('bootstrap'),
     ),
     array(
-        'handle' => 'highit-main-style',
-        'src' => HIGHIT_CSS . '/main-style' . $css_ext,
+        'handle' => 'highlt-main-style',
+        'src' => HIGHLT_CSS . '/main-style' . $css_ext,
         'deps' => array(),
     ),
     array(
-        'handle' => 'highit-responsive',
-        'src' => HIGHIT_CSS . '/responsive' . $css_ext,
+        'handle' => 'highlt-responsive',
+        'src' => HIGHLT_CSS . '/responsive' . $css_ext,
         'deps' => array(),
     ),
 );

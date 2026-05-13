@@ -10,13 +10,13 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package highit
+ * @package highlt
  */
 
 get_header();
 
-$page_layout_meta = Highit_Group_Fields_Value::page_layout('highit');
-$page_container_meta = Highit_Group_Fields_Value::page_container('highit', 'container_options');
+$page_layout_meta = Highlt_Group_Fields_Value::page_layout('highlt');
+$page_container_meta = Highlt_Group_Fields_Value::page_container('highlt', 'container_options');
 $full_width_class = $page_layout_meta['content_column_class'] === 'col-lg-12' ? ' full-width-content ' : '';
 ?>
 <?php
@@ -32,7 +32,7 @@ if ('blank' == $page_layout_meta['layout']):
 
 else:
 ?>
-	<div id="primary" class="content-area highit-page-content-area <?php echo esc_attr($full_width_class); ?>">
+	<div id="primary" class="content-area highlt-page-content-area <?php echo esc_attr($full_width_class); ?>">
 		<main id="main" class="site-main">
 			<div class="<?php echo esc_attr($page_container_meta['page_container_class']) ?>">
 				<div class="row">

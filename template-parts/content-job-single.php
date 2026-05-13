@@ -5,10 +5,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package highit
+ * @package highlt
  */
-$highit = Highit();
-$post_single_meta = Highit_Group_Fields_Value::post_meta('job_single_post');
+$highlt = Highlt();
+$post_single_meta = Highlt_Group_Fields_Value::post_meta('job_single_post');
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('job-details-item'); ?>>
@@ -16,7 +16,7 @@ $post_single_meta = Highit_Group_Fields_Value::post_meta('job_single_post');
         <?php
         echo '<h1 class="title">' . get_the_title(get_the_ID()) . '</h1>';
         the_content();
-        $highit->link_pages();
+        $highlt->link_pages();
         ?>
     </div>
 </article><!-- #post-<?php the_ID(); ?> -->

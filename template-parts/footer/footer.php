@@ -2,7 +2,7 @@
 
 /**
  * Theme Default Footer
- * @package highit
+ * @package highlt
  * @since 1.0.0
  */
 

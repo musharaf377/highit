@@ -1,6 +1,6 @@
 <?php
 
-trait HighitFunctions
+trait HighltFunctions
 {
     public function get_attr_color_code($color_slug, $attr_slug = 'colour')
     {

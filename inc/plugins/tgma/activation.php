@@ -11,7 +11,7 @@
  *
  * @package    TGM-Plugin-Activation
  * @subpackage Example
- * @version    2.6.1 for parent theme highit for publication on ThemeForest
+ * @version    2.6.1 for parent theme highlt for publication on ThemeForest
  * @author     Thomas Griffin, Gary Jones, Juliette Reinders Folmer
  * @copyright  Copyright (c) 2011, Thomas Griffin
  * @license    http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
@@ -20,7 +20,7 @@
 
 require_once get_template_directory() . '/inc/plugins/tgma/theme-tgm-plugin-activation.php';
 
-add_action('tgmpa_register', 'highit_register_required_plugins');
+add_action('tgmpa_register', 'highlt_register_required_plugins');
 
 /**
  * Register the required plugins for this theme.
@@ -39,15 +39,15 @@ add_action('tgmpa_register', 'highit_register_required_plugins');
  *
  * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
  */
-function highit_register_required_plugins()
+function highlt_register_required_plugins()
 {
 
 	$plugins = array(
 
 		array(
-			'name'         => 'Highit Core',
-			'slug'         => 'highit-core',
-			'source'       => 'https://themeim.com/plugins/highit/highit-core.zip',
+			'name'         => 'Highlt Core',
+			'slug'         => 'highlt-core',
+			'source'       => 'https://themeim.com/plugins/highlt/highlt-core.zip',
 			'required'     => true,
 			'version'      => '1.0.0',
 
@@ -70,7 +70,7 @@ function highit_register_required_plugins()
 	 * Only uncomment the strings in the config array if you want to customize the strings.
 	 */
 	$config = array(
-		'id'           => 'highit',
+		'id'           => 'highlt',
 		'default_path' => '',
 		'menu'         => 'tgmpa-install-plugins',
 		'has_notices'  => true,

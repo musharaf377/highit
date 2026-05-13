@@ -5,11 +5,11 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package highit
+ * @package highlt
  */
 
 get_header();
-$page_layout_options = Highit_Group_Fields_Value::page_layout_options('search');
+$page_layout_options = Highlt_Group_Fields_Value::page_layout_options('search');
 ?>
 
 <section id="primary" class="content-area search-page-content-area padding-120">
@@ -33,7 +33,7 @@ $page_layout_options = Highit_Group_Fields_Value::page_layout_options('search');
 						endwhile;
 						?>
 						<div class="blog-pagination">
-							<?php highit()->post_pagination(); ?>
+							<?php highlt()->post_pagination(); ?>
 						</div>
 					<?php
 					else :

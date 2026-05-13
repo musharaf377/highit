@@ -2,7 +2,7 @@
 
 /**
  * Theme Footer Widget Template
- * @package highit
+ * @package highlt
  * @since 1.0.0
  */
 // Get all footer options
@@ -22,7 +22,7 @@ $footer_bottom_menu = cs_get_option('footer_bottom_menu');
 
 // Set default copyright text if not provided
 if (empty($copyright_text)) {
-    $copyright_text = esc_html__('© 2025 highit | All right reserved ', 'highit') . '<a href="' . esc_url('https://highit.agency') . '">' . esc_html__('Highit', 'highit') . '</a>';
+    $copyright_text = esc_html__('© 2025 highlt | All right reserved ', 'highlt') . '<a href="' . esc_url('https://highlt.agency') . '">' . esc_html__('Highlt', 'highlt') . '</a>';
 }
 
 // Replace placeholders in copyright text
@@ -89,7 +89,7 @@ $copyright_text = str_replace('{year}', date('Y'), $copyright_text);
             <?php if (!empty($footer_download_text) && !empty($footer_download_link)) : ?>
                 <div class="download-resume">
                     <a href="<?php echo esc_url($footer_download_link); ?>" class="download-resume-link">
-                        <?php echo esc_html($footer_download_text); ?><?php echo highit_get_svg_icon('download_arrow'); ?>
+                        <?php echo esc_html($footer_download_text); ?><?php echo highlt_get_svg_icon('download_arrow'); ?>
                     </a>
                 </div>
             <?php endif; ?>
@@ -114,7 +114,7 @@ $copyright_text = str_replace('{year}', date('Y'), $copyright_text);
         <div class="footer-bottom-menu">
             <div class="menu-about-menu-container">
                 <div class="copyright-text">
-                    <?php echo wp_kses($copyright_text, highit()->kses_allowed_html(array('a'))); ?>
+                    <?php echo wp_kses($copyright_text, highlt()->kses_allowed_html(array('a'))); ?>
                 </div>
 
                 <ul class="footer-bottom-menu-list">

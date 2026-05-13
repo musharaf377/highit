@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package highit
+ * @package highlt
  */
 ?>
 
@@ -14,7 +14,7 @@
 		<?php
 		the_content();
 
-		highit()->link_pages();
+		highlt()->link_pages();
 		?>
 	</div><!-- .entry-content -->
 </div><!-- #post-<?php the_ID(); ?> -->

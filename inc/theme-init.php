@@ -2,7 +2,7 @@
 
 /**
  * Theme Init Functions
- * @package highit
+ * @package highlt
  * @since 1.0.0
  */
 
@@ -10,9 +10,9 @@ if (!defined("ABSPATH")) {
     exit(); //exit if access directly
 }
 
-if (!class_exists('Highit_Init')) {
+if (!class_exists('Highlt_Init')) {
 
-    class Highit_Init
+    class Highlt_Init
     {
         /**
          * $instance
@@ -65,7 +65,7 @@ if (!class_exists('Highit_Init')) {
              * Make theme available for translation.
              * Translations can be filed in the /languages/ directory.
              */
-            load_theme_textdomain('highit', get_template_directory() . '/languages');
+            load_theme_textdomain('highlt', get_template_directory() . '/languages');
 
             // Add default posts and comments RSS feed links to head.
             add_theme_support('automatic-feed-links');
@@ -84,8 +84,8 @@ if (!class_exists('Highit_Init')) {
 
             // This theme uses wp_nav_menu() in one location.
             register_nav_menus(array(
-                'main-menu' => esc_html__('Primary Menu', 'highit'),
-                'main-menu-02' => esc_html__('Primary Menu Two', 'highit'),
+                'main-menu' => esc_html__('Primary Menu', 'highlt'),
+                'main-menu-02' => esc_html__('Primary Menu Two', 'highlt'),
             ));
 
             /*
@@ -131,12 +131,12 @@ if (!class_exists('Highit_Init')) {
             add_theme_support('post-formats', array('image', 'video', 'gallery', 'link', 'quote'));
 
             // This variable is intended to be overruled from themes.
-            $GLOBALS['content_width'] = apply_filters('highit_content_width', 740);
+            $GLOBALS['content_width'] = apply_filters('highlt_content_width', 740);
 
             //add image sizes
-            add_image_size('highit_classic', 750, 400, true);
-            add_image_size('highit_grid', 370, 270, true);
-            add_image_size('highit_medium', 550, 380, true);
+            add_image_size('highlt_classic', 750, 400, true);
+            add_image_size('highlt_grid', 370, 270, true);
+            add_image_size('highlt_medium', 550, 380, true);
 
             self::load_theme_dependency_files();
         }
@@ -148,7 +148,7 @@ if (!class_exists('Highit_Init')) {
          */
         public function theme_widgets_init()
         {
-            $sidebars = require_once HIGHIT_THEME_ROOT . '/config/sidebars.php';
+            $sidebars = require_once HIGHLT_THEME_ROOT . '/config/sidebars.php';
 
             if (!empty($sidebars)) {
                 foreach ($sidebars as $key => $sidebar) {
@@ -237,17 +237,17 @@ if (!class_exists('Highit_Init')) {
          */
         public function load_theme_css()
         {
-            $theme_version = HIGHIT_DEV ? time() : highit()->get_theme_info('version');
+            $theme_version = HIGHLT_DEV ? time() : highlt()->get_theme_info('version');
             $css_ext = '.css';
             //load google fonts
             $enqueue_google_fonts = self::load_google_fonts();
             if (!empty($enqueue_google_fonts)) {
-                wp_enqueue_style('highit-google-fonts', esc_url(add_query_arg('family', urlencode(implode('|', $enqueue_google_fonts)), '//fonts.googleapis.com/css')), array(), null);
+                wp_enqueue_style('highlt-google-fonts', esc_url(add_query_arg('family', urlencode(implode('|', $enqueue_google_fonts)), '//fonts.googleapis.com/css')), array(), null);
             }
 
-            $css_files = require_once HIGHIT_THEME_ROOT . '/config/files-css.php';
+            $css_files = require_once HIGHLT_THEME_ROOT . '/config/files-css.php';
 
-            $css_files = apply_filters('highit_theme_enqueue_style', $css_files);
+            $css_files = apply_filters('highlt_theme_enqueue_style', $css_files);
 
             if (is_array($css_files) && !empty($css_files)) {
                 foreach ($css_files as $css) {
@@ -259,14 +259,14 @@ if (!class_exists('Highit_Init')) {
                 }
             }
 
-            wp_enqueue_style('highit-style', get_stylesheet_uri());
+            wp_enqueue_style('highlt-style', get_stylesheet_uri());
 
-            if (highit()->is_highit_core_active()) {
-                if (file_exists(HIGHIT_DYNAMIC_STYLESHEETS . '/theme-inline-css-style.php')) {
-                    require_once HIGHIT_DYNAMIC_STYLESHEETS . '/theme-inline-css-style.php';
-                    require_once HIGHIT_DYNAMIC_STYLESHEETS . '/theme-option-css-style.php';
-                    wp_add_inline_style('highit-style', highit()->minify_css_lines($GLOBALS['highit_inline_css']));
-                    wp_add_inline_style('highit-style', highit()->minify_css_lines($GLOBALS['theme_customize_css']));
+            if (highlt()->is_highlt_core_active()) {
+                if (file_exists(HIGHLT_DYNAMIC_STYLESHEETS . '/theme-inline-css-style.php')) {
+                    require_once HIGHLT_DYNAMIC_STYLESHEETS . '/theme-inline-css-style.php';
+                    require_once HIGHLT_DYNAMIC_STYLESHEETS . '/theme-option-css-style.php';
+                    wp_add_inline_style('highlt-style', highlt()->minify_css_lines($GLOBALS['highlt_inline_css']));
+                    wp_add_inline_style('highlt-style', highlt()->minify_css_lines($GLOBALS['theme_customize_css']));
                 }
             }
         }
@@ -277,12 +277,12 @@ if (!class_exists('Highit_Init')) {
          */
         public function load_theme_js()
         {
-            $theme_version = highit()->get_theme_info('version');
-            $js_ext = HIGHIT_DEV ? '.js' : '.min.js';
+            $theme_version = highlt()->get_theme_info('version');
+            $js_ext = HIGHLT_DEV ? '.js' : '.min.js';
 
-            $js_files = require_once HIGHIT_THEME_ROOT . '/config/files-js.php';
+            $js_files = require_once HIGHLT_THEME_ROOT . '/config/files-js.php';
 
-            $js_files = apply_filters('highit_theme_enqueue_script', $js_files);
+            $js_files = apply_filters('highlt_theme_enqueue_script', $js_files);
 
             if (is_array($js_files) && !empty($js_files)) {
                 foreach ($js_files as $js) {
@@ -308,7 +308,7 @@ if (!class_exists('Highit_Init')) {
          */
         public function load_theme_dependency_files()
         {
-            $includes_files = require_once HIGHIT_THEME_ROOT . '/config/files-php.php';
+            $includes_files = require_once HIGHLT_THEME_ROOT . '/config/files-php.php';
 
             if (is_array($includes_files) && !empty($includes_files)) {
                 foreach ($includes_files as $file) {
@@ -334,21 +334,21 @@ if (!class_exists('Highit_Init')) {
          */
         public function load_gutenberg_script()
         {
-            $theme_version = HIGHIT_DEV ? time() : highit()->get_theme_info('version');
+            $theme_version = HIGHLT_DEV ? time() : highlt()->get_theme_info('version');
             $css_ext = '.css';
 
             //load google fonts
             $enqueue_google_fonts = self::load_google_fonts();
             if (!empty($enqueue_google_fonts)) {
-                wp_enqueue_style('highit-google-fonts', esc_url(add_query_arg('family', urlencode(implode('|', $enqueue_google_fonts)), '//fonts.googleapis.com/css')), array(), null);
+                wp_enqueue_style('highlt-google-fonts', esc_url(add_query_arg('family', urlencode(implode('|', $enqueue_google_fonts)), '//fonts.googleapis.com/css')), array(), null);
             }
 
-            wp_enqueue_style('flaticon', HIGHIT_CSS . '/flaticon.css', [], $theme_version, 'all');
-            wp_enqueue_style('flynext-gutenbarg', HIGHIT_CSS . '/gutenberg.css', [], $theme_version, 'all');
+            wp_enqueue_style('flaticon', HIGHLT_CSS . '/flaticon.css', [], $theme_version, 'all');
+            wp_enqueue_style('flynext-gutenbarg', HIGHLT_CSS . '/gutenberg.css', [], $theme_version, 'all');
         }
     } //end class
 
-    if (class_exists('Highit_Init')) {
-        Highit_Init::getInstance();
+    if (class_exists('Highlt_Init')) {
+        Highlt_Init::getInstance();
     }
 }

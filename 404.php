@@ -5,11 +5,11 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package highit
+ * @package highlt
  */
 
 get_header();
-$get_404_options_value = Highit_Group_Fields_Value::get_404_options_value();
+$get_404_options_value = Highlt_Group_Fields_Value::get_404_options_value();
 $error_bg = cs_get_option('error_bg');
 ?>
 

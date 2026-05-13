@@ -2,7 +2,7 @@
 
 /**
  * Post Thumbnail 
- * @package highit
+ * @package highlt
  * @since 1.0.0
  */
 ?>
@@ -10,7 +10,7 @@
 <div class="thumbnail">
     <?php
     if (has_post_thumbnail() && get_post_type() == 'post') {
-        highit()->post_thumbnail('post-thumbnail');
+        highlt()->post_thumbnail('post-thumbnail');
     }
     ?>
 </div>

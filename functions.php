@@ -5,60 +5,60 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package highit
+ * @package highlt
  */
 
 /**
  * Define Theme Folder Path & URL Constant
- * @package highit
+ * @package highlt
  * @since 2.0.1
  */
 
-define('HIGHIT_THEME_ROOT', get_template_directory());
-define('HIGHIT_THEME_ROOT_URL', get_template_directory_uri());
-define('HIGHIT_INC', HIGHIT_THEME_ROOT . '/inc');
-define('HIGHIT_THEME_SETTINGS', HIGHIT_INC . '/theme-settings');
-define('HIGHIT_THEME_SETTINGS_IMAGES', HIGHIT_THEME_ROOT_URL . '/inc/theme-settings/images');
-define('HIGHIT_TGMA', HIGHIT_INC . '/plugins/tgma');
-define('HIGHIT_DYNAMIC_STYLESHEETS', HIGHIT_INC . '/theme-stylesheets');
-define('HIGHIT_CSS', HIGHIT_THEME_ROOT_URL . '/assets/css');
-define('HIGHIT_JS', HIGHIT_THEME_ROOT_URL . '/assets/js');
-define('HIGHIT_ASSETS', HIGHIT_THEME_ROOT_URL . '/assets');
-define('HIGHIT_DEV', true);
+define('HIGHLT_THEME_ROOT', get_template_directory());
+define('HIGHLT_THEME_ROOT_URL', get_template_directory_uri());
+define('HIGHLT_INC', HIGHLT_THEME_ROOT . '/inc');
+define('HIGHLT_THEME_SETTINGS', HIGHLT_INC . '/theme-settings');
+define('HIGHLT_THEME_SETTINGS_IMAGES', HIGHLT_THEME_ROOT_URL . '/inc/theme-settings/images');
+define('HIGHLT_TGMA', HIGHLT_INC . '/plugins/tgma');
+define('HIGHLT_DYNAMIC_STYLESHEETS', HIGHLT_INC . '/theme-stylesheets');
+define('HIGHLT_CSS', HIGHLT_THEME_ROOT_URL . '/assets/css');
+define('HIGHLT_JS', HIGHLT_THEME_ROOT_URL . '/assets/js');
+define('HIGHLT_ASSETS', HIGHLT_THEME_ROOT_URL . '/assets');
+define('HIGHLT_DEV', true);
 
 
 /**
  * Theme Initial File
- * @package highit
+ * @package highlt
  * @since 1.0.0
  */
-if (file_exists(HIGHIT_INC . '/theme-init.php')) {
-	require_once HIGHIT_INC . '/theme-init.php';
+if (file_exists(HIGHLT_INC . '/theme-init.php')) {
+	require_once HIGHLT_INC . '/theme-init.php';
 }
 
 
 /**
  * Codester Framework Functions
- * @package highit
+ * @package highlt
  * @since 1.0.0
  */
-if (file_exists(HIGHIT_INC . '/theme-cs-function.php')) {
-	require_once HIGHIT_INC . '/theme-cs-function.php';
+if (file_exists(HIGHLT_INC . '/theme-cs-function.php')) {
+	require_once HIGHLT_INC . '/theme-cs-function.php';
 }
 
 
 /**
  * Theme Helpers Functions
- * @package highit
+ * @package highlt
  * @since 1.0.0
  */
-if (file_exists(HIGHIT_INC . '/theme-helper-functions.php')) {
-	require_once HIGHIT_INC . '/theme-helper-functions.php';
+if (file_exists(HIGHLT_INC . '/theme-helper-functions.php')) {
+	require_once HIGHLT_INC . '/theme-helper-functions.php';
 
-	if (!function_exists('highit')) {
-		function highit()
+	if (!function_exists('highlt')) {
+		function highlt()
 		{
-			return class_exists('Highit_Helper_Functions') ? Highit_Helper_Functions::getInstance() : false;
+			return class_exists('Highlt_Helper_Functions') ? Highlt_Helper_Functions::getInstance() : false;
 		}
 	}
 }
@@ -67,7 +67,7 @@ if (file_exists(HIGHIT_INC . '/theme-helper-functions.php')) {
  * @since 1.0.0
  */
 if (is_user_logged_in()) {
-	function highit_theme_fallback_menu()
+	function highlt_theme_fallback_menu()
 	{
 		get_template_part('template-parts/default', 'menu');
 	}

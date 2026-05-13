@@ -2,7 +2,7 @@
 
 /**
  * Theme Group Field Values
- * @package highit
+ * @package highlt
  * @since 1.0.0
  */
 
@@ -11,9 +11,9 @@ if (!defined('ABSPATH')) {
 }
 
 
-if (!class_exists('Highit_Group_Fields_Value')) {
+if (!class_exists('Highlt_Group_Fields_Value')) {
 
-    class Highit_Group_Fields_Value
+    class Highlt_Group_Fields_Value
     {
 
 
@@ -54,7 +54,7 @@ if (!class_exists('Highit_Group_Fields_Value')) {
             $return_var['content_column_class'] = $return_var['sidebar_enable'] ? 'col-lg-8' : 'col-lg-12';
             $return_var['sidebar_column_class'] = 'col-lg-4';
 
-            $page_id = highit()->page_id();
+            $page_id = highlt()->page_id();
             $page_layout_meta = get_post_meta($page_id, $prefix . '_page_container_options', true);
 
             if (!empty($page_layout_meta)) {
@@ -96,7 +96,7 @@ if (!class_exists('Highit_Group_Fields_Value')) {
                 $return_var['footer_type'] = !empty(cs_get_option('footer_type')) ? cs_get_option('footer_type') : '';
             }
 
-            $page_id = highit()->page_id();
+            $page_id = highlt()->page_id();
             $page_container_meta = get_post_meta($page_id, $prefix . '_page_container_options', true);
 
             if (!empty($page_container_meta)) {
@@ -225,10 +225,10 @@ if (!class_exists('Highit_Group_Fields_Value')) {
         {
             $return_val = array();
 
-            $return_val['title'] = cs_get_option('404_title') ? cs_get_option('404_title') : esc_html__('404', 'highit');;
-            $return_val['subtitle'] = cs_get_option('404_subtitle') ? cs_get_option('404_subtitle') : esc_html__('Oops! That page can&rsquo;t be found.', 'highit');;
-            $return_val['paragraph'] = cs_get_option('404_paragraph') ? cs_get_option('404_paragraph') : esc_html__('It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'highit');
-            $return_val['btn_text'] = cs_get_option('404_button_text') ? cs_get_option('404_button_text') : esc_html__('Back To Home', 'highit');
+            $return_val['title'] = cs_get_option('404_title') ? cs_get_option('404_title') : esc_html__('404', 'highlt');;
+            $return_val['subtitle'] = cs_get_option('404_subtitle') ? cs_get_option('404_subtitle') : esc_html__('Oops! That page can&rsquo;t be found.', 'highlt');;
+            $return_val['paragraph'] = cs_get_option('404_paragraph') ? cs_get_option('404_paragraph') : esc_html__('It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'highlt');
+            $return_val['btn_text'] = cs_get_option('404_button_text') ? cs_get_option('404_button_text') : esc_html__('Back To Home', 'highlt');
 
             return $return_val;
         }

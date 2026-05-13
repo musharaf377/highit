@@ -2,7 +2,7 @@
 
 /**
  * Theme Hooks Customize
- * @package highit
+ * @package highlt
  * @since 1.0.0
  */
 
@@ -10,9 +10,9 @@ if (!defined("ABSPATH")) {
     exit(); //exit if access directly
 }
 
-if (!class_exists('Highit_Customize')) {
+if (!class_exists('Highlt_Customize')) {
 
-    class Highit_Customize
+    class Highlt_Customize
     {
         /**
          * $instance
@@ -26,13 +26,13 @@ if (!class_exists('Highit_Customize')) {
             add_action('excerpt_more', array($this, 'excerpt_more'));
 
             //preloader
-            add_action('highit_after_body', array($this, 'preloader'));
+            add_action('highlt_after_body', array($this, 'preloader'));
 
             //breadcrumb
-            add_action('highit_before_page_content', array($this, 'breadcrumb'));
+            add_action('highlt_before_page_content', array($this, 'breadcrumb'));
 
             //back top
-            add_action('highit_after_body', array($this, 'back_top'));
+            add_action('highlt_after_body', array($this, 'back_top'));
 
             //order comment form
             add_filter('comment_form_fields', array($this, 'comment_fields_reorder'));
@@ -69,10 +69,10 @@ if (!class_exists('Highit_Customize')) {
          */
         public function breadcrumb()
         {
-            $page_id = highit()->page_id();
+            $page_id = highlt()->page_id();
             $check_page = (!is_home() && !is_front_page() && is_singular()) || is_search() || is_author() || is_404() || is_archive() ? true : false;
-            $check_home_page = highit()->is_home_page();
-            $page_header_meta = Highit_Group_Fields_Value::page_container('highit', 'header_options');
+            $check_home_page = highlt()->is_home_page();
+            $page_header_meta = Highlt_Group_Fields_Value::page_container('highlt', 'header_options');
             $header_variant_class = isset($page_header_meta['navbar_type']) ? 'navbar-' . $page_header_meta['navbar_type'] : 'navbar-default';
             $page_breadcrumb_enable = isset($page_header_meta['page_breadcrumb_enable']) && $page_header_meta['page_breadcrumb_enable'] ? $page_header_meta['page_breadcrumb_enable'] : false;
             $breadcrumb_enable = false;
@@ -103,9 +103,9 @@ if (!class_exists('Highit_Customize')) {
 
                         $right_arrow = '<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 11L6.5 6L1.5 1" stroke="#6F7A93" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
                         if (is_404()) {
-                            printf('<p class="page-title">%1$s</p>', esc_html__('Error 404', 'highit'));
+                            printf('<p class="page-title">%1$s</p>', esc_html__('Error 404', 'highlt'));
                         } elseif (is_search()) {
-                            printf('<p class="page-title">%1$s %2$s</p>', esc_html__('Search Results for:', 'highit'), get_search_query());
+                            printf('<p class="page-title">%1$s %2$s</p>', esc_html__('Search Results for:', 'highlt'), get_search_query());
                         } elseif (is_singular('post')) {
                             printf('<p class="page-title"><a href="%1$s">Home </a>%2$s%3$s </p>', home_url(), $right_arrow, get_the_title());
                         } elseif (is_singular('page')) {
@@ -118,9 +118,9 @@ if (!class_exists('Highit_Customize')) {
                       
                         echo '<h1 class="blog-main-title">' . get_the_title(get_the_ID()) . '</h1>'; 
                         echo '<div class="post-meta">';
-                            highit()->posted_by();
-                            highit()->posted_on();
-                            echo "<span>" . highit()->get_reading_time(get_the_ID()) . " min read</span>";
+                            highlt()->posted_by();
+                            highlt()->posted_on();
+                            echo "<span>" . highlt()->get_reading_time(get_the_ID()) . " min read</span>";
                         echo '</div>';
 
                         ?>
@@ -184,7 +184,7 @@ if (!class_exists('Highit_Customize')) {
         }
     } //end class
 
-    if (class_exists('Highit_Customize')) {
-        Highit_Customize::getInstance();
+    if (class_exists('Highlt_Customize')) {
+        Highlt_Customize::getInstance();
     }
 }

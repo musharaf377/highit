@@ -16,92 +16,92 @@ $custom_preloader = cs_get_option('add_preloader_image');
         </div>
     <?php elseif ('style_4' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/loader_horizontal.gif'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/loader_horizontal.gif'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_5' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/loader_spinner.gif'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/loader_spinner.gif'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_6' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/loader_spinner.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/loader_spinner.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_7' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/loader_square_circle.gif'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/loader_square_circle.gif'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_8' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/loader_wave.gif'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/loader_wave.gif'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_9' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/loeader_square.gif'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/loeader_square.gif'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_10' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/wave_preloader.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/wave_preloader.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_11' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/ajax_loader.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/ajax_loader.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_12' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/audio.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/audio.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_13' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/ball_triangle.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/ball_triangle.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_14' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/bars.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/bars.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_15' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/circle_pulse_rings.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/circle_pulse_rings.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_16' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/circle_tail_spin.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/circle_tail_spin.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_17' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/circles.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/circles.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_18' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/flip_circle.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/flip_circle.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_19' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/grid.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/grid.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_20' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/heart.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/heart.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_21' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/hearts_group.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/hearts_group.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_22' == $preloader_style) : ?>
@@ -568,37 +568,37 @@ $custom_preloader = cs_get_option('add_preloader_image');
         </div>
     <?php elseif ('style_23' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/road_cross.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/road_cross.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_24' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/round_circle.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/round_circle.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_25' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/round_pulse.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/round_pulse.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_26' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/simple_spainer.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/simple_spainer.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_27' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/spinner.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/spinner.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_28' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/spinning_circles.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/spinning_circles.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php elseif ('style_29' == $preloader_style) : ?>
         <div class="preloader" id="preloader">
-            <img src="<?php echo esc_url(HIGHIT_THEME_SETTINGS_IMAGES . '/loader/three_dots.svg'); ?>"
+            <img src="<?php echo esc_url(HIGHLT_THEME_SETTINGS_IMAGES . '/loader/three_dots.svg'); ?>"
                 alt="<?php echo esc_attr__('preloader', 'cliper'); ?>">
         </div>
     <?php endif; ?>

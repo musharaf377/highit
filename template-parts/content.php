@@ -5,11 +5,11 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package highit
+ * @package highlt
  */
 
-$highit = highit();
-$post_meta = Highit_Group_Fields_Value::post_meta('blog_post');
+$highlt = highlt();
+$post_meta = Highlt_Group_Fields_Value::post_meta('blog_post');
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('blog-standard-item-01'); ?>>
     <?php
