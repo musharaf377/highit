@@ -506,27 +506,6 @@ if (class_exists('CSF')) {
 				'desc'    => wp_kses(__('you can set <mark> location</mark> for contact column', 'highlt'), $allowed_html),
 			),
 
-			// Download Resume
-
-			array(
-				'type'    => 'subheading',
-				'content' => '<h3>' . esc_html__('Footer Download Resume', 'highlt') . '</h3>'
-			),
-			array(
-				'id'      => 'footer_download_resume_enable',
-				'type'    => 'text',
-				'title'   => esc_html__('Download Resume Text', 'highlt'),
-				'desc'    => wp_kses(__('you can set <mark> download resume text</mark> for contact column', 'highlt'), $allowed_html),
-				'default' => esc_html__('Download Resume', 'highlt'),
-			),
-			array(
-				'id'      => 'footer_download_resume_link',
-				'type'    => 'text',
-				'title'   => esc_html__('Download Resume Link', 'highlt'),
-				'desc'    => wp_kses(__('you can set <mark> download resume link</mark> for contact column', 'highlt'), $allowed_html),
-				'default' => '#',
-			),
-
 			// Footer Social Icon
 			array(
 				'type'    => 'subheading',
@@ -567,31 +546,6 @@ if (class_exists('CSF')) {
 				'desc'  => wp_kses(__('use  <mark>{copy}</mark> for copyright symbol, use <mark>{year}</mark> for current year, ', 'highlt'), $allowed_html)
 			),
 
-
-			// Footer Copyright Area
-			array(
-				'type'    => 'subheading',
-				'content' => '<h3>' . esc_html__('Footer Bottom Menu', 'highlt') . '</h3>'
-			),
-			array(
-				'id'     => 'footer_bottom_menu',
-				'type'   => 'repeater',
-				'title'  => esc_html__('Footer Bottom Menu', 'highlt'),
-				'fields' => array(
-					array(
-						'id'      => 'footer_bottom_menu_item_title',
-						'type'    => 'text',
-						'title'   => esc_html__('Footer Bottom Menu Title', 'highlt'),
-						'default' => esc_html__('Home', 'highlt'),
-					),
-					array(
-						'id'      => 'footer_bottom_menu_item_url',
-						'type'    => 'text',
-						'title'   => esc_html__('Menu URL', 'highlt'),
-						'default' => '#'
-					),
-				)
-			),
 			
 		)
 	));

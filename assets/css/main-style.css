@@ -117,7 +117,7 @@ p {
 
 .container {
   width: 100%;
-  max-width: 1360px;
+  max-width: 1390px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -151,6 +151,11 @@ p {
     left: 0;
     right: 0;
     z-index: 9999;
+}
+
+.navbar.navbar-area .container{
+    max-width: 1350px;
+    padding: 0 15px;
 }
 
 #masthead .navbar {
