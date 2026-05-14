@@ -72,64 +72,41 @@ if (class_exists('CSF')) {
         'icon' => 'fa fa-file-o',
         'fields' => Highlt_Group_Fields::Page_Container_Options('container_options')
     ));
-    //	Service Meta Box
-    CSF::createMetabox($prefix . '_team_options', array(
-        'title' => esc_html__('Team Options', 'highlt'),
-        'post_type' => 'team',
+
+    //  Portfolio Meta Box
+    CSF::createMetabox($prefix . '_portfolio_options', array(
+        'title' => esc_html__('Portfolio Options', 'highlt'),
+        'post_type' => 'portfolio',
     ));
-    CSF::createSection($prefix . '_team_options', array(
+
+    CSF::createSection($prefix . '_portfolio_options', array(
+        'title' => esc_html__('Portfolio Media Options', 'highlt'),
         'fields' => array(
             array(
-                'id' => 'team_member_designation',
+                'id' => 'option_video',
+                'type' => 'checkbox',
+                'title' => esc_html__('Video', 'highlt'),
+                'options' => array(
+                    'video' => esc_html__('Video', 'highlt'),
+                ),
+            ),
+            array(
+                'id' => 'portfolio_video_url',
                 'type' => 'text',
-                'title' => esc_html__('Enter Team Member Designation', 'highlt'),
-                'desc' => wp_kses(__('use <mark>{br}</mark> for break your designation', 'highlt'), $allowed_html),
-                'default' => esc_html__('Managing Partner', 'highlt'),
+                'title' => esc_html__('Video URL', 'highlt'),
+                'desc' => wp_kses(__('enter <mark>video url</mark> to show in frontend', 'highlt'), $allowed_html),
+                'dependency' => array('option_video', '==', '1'),
             ),
             array(
-                'type' => 'subheading',
-                'content' => '<h3>' . esc_html__('Team Member Social Link', 'highlt') . '</h3>'
+                'id' => 'option_image',
+                'type' => 'checkbox',
+                'title' => esc_html__('Image', 'highlt'),
+                'options' => array(
+                    'image' => esc_html__('Image', 'highlt'),
+                ),
             ),
-            array(
-                'id' => 'team_member_social_repeater',
-                'type' => 'repeater',
-                'title' => esc_html__('Team Member Social Repeater', 'highlt'),
-                'fields' => array(
-                    array(
-                        'id' => 'team_member_social_image',
-                        'type' => 'media',
-                        'title' => esc_html__('Team Member Social Image', 'highlt'),
-                    ),
-                    array(
-                        'id' => 'team_member_social_url',
-                        'type' => 'text',
-                        'title' => esc_html__('Social Link URL', 'highlt'),
-                        'default' => '#'
-                    ),
-                )
-            ),
-            array(
-                'type' => 'subheading',
-                'content' => '<h3>' . esc_html__('Team Member Contact List', 'highlt') . '</h3>'
-            ),
-            array(
-                'id' => 'team_member_contact_repeater',
-                'type' => 'repeater',
-                'title' => esc_html__('Team Member Contact Repeater', 'highlt'),
-                'fields' => array(
-                    array(
-                        'id' => 'team_member_contact_image',
-                        'type' => 'media',
-                        'title' => esc_html__('Team Member Contact Image', 'highlt'),
-                    ),
-                    array(
-                        'id' => 'team_member_contact_text',
-                        'type' => 'text',
-                        'title' => esc_html__('Contact Info Text', 'highlt'),
-                        'default' => '#'
-                    ),
-                )
-            ),
-        )
+        ),
     ));
-}//endif
+}
+//endif
+
