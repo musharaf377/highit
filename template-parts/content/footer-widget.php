@@ -86,13 +86,9 @@ $copyright_text = str_replace('{year}', date('Y'), $copyright_text);
 
 
         <div class="footer-middle-area">
-            <?php if (!empty($footer_download_text) && !empty($footer_download_link)) : ?>
-                <div class="download-resume">
-                    <a href="<?php echo esc_url($footer_download_link); ?>" class="download-resume-link">
-                        <?php echo esc_html($footer_download_text); ?><?php echo highlt_get_svg_icon('download_arrow'); ?>
-                    </a>
-                </div>
-            <?php endif; ?>
+            <div class="copyright-text">
+                    <?php echo wp_kses($copyright_text, highlt()->kses_allowed_html(array('a'))); ?>
+            </div>
 
             <ul class="footer-social-share">
                 <?php
@@ -109,30 +105,6 @@ $copyright_text = str_replace('{year}', date('Y'), $copyright_text);
                 endif;
                 ?>
             </ul>
-        </div>
-
-        <div class="footer-bottom-menu">
-            <div class="menu-about-menu-container">
-                <div class="copyright-text">
-                    <?php echo wp_kses($copyright_text, highlt()->kses_allowed_html(array('a'))); ?>
-                </div>
-
-                <ul class="footer-bottom-menu-list">
-                    <?php
-                    if (!empty($footer_bottom_menu)) :
-                        foreach ($footer_bottom_menu as $menu) :
-                    ?>
-                            <li>
-                                <a href="<?php echo esc_url($menu['footer_bottom_menu_item_url']); ?>">
-                                    <?php echo esc_html($menu['footer_bottom_menu_item_title']); ?>
-                                </a>
-                            </li>
-                    <?php
-                        endforeach;
-                    endif;
-                    ?>
-                </ul>
-            </div>
         </div>
     </div>
 </div>

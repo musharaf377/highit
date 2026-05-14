@@ -3,16 +3,14 @@
   ======================== */
 
 @media (max-width: 1024px) {
+
+    .footer-top-area {
+        gap: 150px;
+        padding-bottom: 48px
+    }
+
     .footer-section {
         padding-top: 100px;
-    }
-
-    .widget_nav_menu {
-        grid-template-columns: 1fr 2.3fr;
-    }
-
-    .footer-bottom-logo img {
-        width: 100%;
     }
 
 }
@@ -101,190 +99,63 @@
   ======================== */
 
 @media (max-width: 768px) {
-    .container {
-        padding: 0 24px;
-    }
-
-    .blog-main-title {
-        font-size: 30px;
-        font-weight: 500;
-    }
-
-    .breadcrumb-wrap {
-        background: rgba(240, 243, 245, 1);
-        padding: 60px 0 30px;
-    }
-
-
-    .thumbnail img {
-        max-height: 430px;
-        min-height: 430px;
-    }
 
 
     .footer-section {
-        padding-top: 40px;
+        padding-top: 60px;
+    }
+
+    .footer-logo a.custom-logo-link {
+        display: block;
+        max-width: 90px;
+    }
+
+   .footer-description {
+        font-size: 16px;
     }
 
     .footer-top-area {
-        padding-bottom: 12px;
+        gap: 90px;
+        padding-bottom: 40px;
     }
 
-    .widget_nav_menu {
-        margin-top: 32px;
+    .footer-contact-info-list a {
+        font-size: 16px;
     }
 
-    ul.footer-list li a {
-        font-size: 10px;
+    .contact-location {
+        font-size: 16px;
+    }
+
+    .footer-top-right {
+        grid-template-columns: 1fr 1.5fr;
+        gap: 20px;
+    }
+
+    .footer-list li a {
+        font-size: 16px;
     }
 
     .footer-menu-wrap .footer-list {
-        gap: 4px;
+        gap: 10px;
     }
-
-    .footer-menu-wrap {
-        gap: 16px;
-    }
-
-    .footer-single-location h4 {
-        font-size: 12px;
-    }
-
-    .footer-single-location p {
-        font-size: 8px;
-        margin-bottom: 0px;
-    }
-
-    .footer-single-location a {
-        font-size: 8px;
-    }
-
-    .footer-location-wrap {
-        row-gap: 20px;
-        column-gap: 12px;
-    }
-
-    .widget_nav_menu {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .footer-menu-wrapper {
-        padding-bottom: 20px;
-    }
-
-    .footer-bottom-menu {
-        padding: 14px 0 18px;
-    }
-
-    ul.footer-bottom-menu-list {
+    
+    .footer-contact-info-list {
         gap: 10px;
     }
 
-    .footer-bottom-menu-list li a {
-        font-size: 8px;
-    }
-
     .copyright-text {
-        font-size: 8px;
+        font-size: 16px;
     }
 
-    .copyright-text {
-        font-size: 8px;
-    }
 
-    .company-deck {
-        margin-top: 24px;
-    }
 
-    .company-deck-link {
-        gap: 4px;
-        font-size: 10px;
-    }
-
-    h4.company-deck-link svg {
-        width: 8px;
-    }
 
     .footer-social-share li a {
-        width: 24px;
-        height: 24px;
-        padding: 5px;
+        width: 32px;
+        height: 32px;
+        padding: 8px;
     }
-
-    li.single-info-item a img {
-        width: 100%;
-    }
-
-    .footer-logo a img {
-        width: 28px;
-    }
-
-    /* ======================= Blog  Details Css ======================== */
-
-    .entry-content.musemind-post-content {
-        margin-right: 50px;
-    }
-
-    .blog-content-wrapper {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-
-    div#musemind_toc_widget-2 {
-        display: none;
-    }
-
-    .widget-area {
-        margin-top: 10px !important;
-    }
-
-    aside#secondary.widget-area {
-        position: static;
-        padding-top: 30px;
-    }
-
-    .blog-single-content-wrap{
-        h2 {
-            font-size: 28px;
-            padding-top: 40px;
-            margin-top: 40px;
-        }
-        h3{
-            font-size: 20px;
-        }
-    
-        p{
-            margin-bottom: 16px;
-        }
-        
-        ul{
-            padding-left: 16px;
-            margin-bottom: 16px;
-        }
-        ol{
-            padding-left: 16px;
-        }
-        
-        .wp-block-image img{
-            display: block;
-            width: 100%;
-        }
-    }
-
-    .widget {
-        margin-bottom: 30px;
-        background-color: #F2F4F7;
-    }
-
-    #musemind_social_share_widget-2 {
-        padding: 0;
-    }
-
-    .musemind-header-inner .title {
-        font-size: 40px;
-    }
-
-    
 
 }
 
@@ -293,210 +164,39 @@
     Mobile Responsive Css
   ======================== */
 @media (max-width: 576px) {
-    .container {
-        padding: 0 20px;
-    }
 
-    .footer-logo a img {
-        width: 48px;
-    }
 
-    .widget_nav_menu {
+    .footer-top-area {
         grid-template-columns: 1fr;
+        padding-bottom: 40px;
     }
 
-    ul.footer-list li a {
-        font-size: 18px;
-    }
-
-    .footer-menu-wrap {
-        gap: 95px;
-        padding: 32px;
-        background: rgba(240, 243, 245, 1);
-    }
-
-    .footer-section .container {
-        padding: 0;
-    }
-
-    .footer-section {
-        background: rgb(240 243 245 / 0%);
-        background-image: none;
-    }
-
-    .widget_nav_menu {
-        margin-top: 0;
-    }
-
-    ul.footer-social-share {
-        display: none;
-    }
-
-    .footer-top-area {
-        justify-content: center;
-    }
-
-    .footer-top-area {
-        padding-bottom: 32px;
-        justify-content: center;
-        background: rgba(240, 243, 245, 1);
+     .footer-section {
         padding-top: 40px;
+        padding-bottom: 20px;
     }
 
-    .footer-section {
-        padding-top: 0;
+    .footer-top-area {
+        gap: 48px;
     }
 
-    .footer-location-wrap {
-        grid-template-columns: 1fr 1fr;
-        padding: 20px;
-        gap: 32px;
-    }
-
-    .footer-single-location h4 {
-        font-size: 20px;
-    }
-
-    .footer-single-location p {
-        font-size: 14px;
-    }
-
-    .footer-single-location a {
-        font-size: 16px;
-        margin-top: 34px;
-        display: inline-block;
-    }
-
-    .copyright-text {
-        display: none;
-    }
-
-    .menu-about-menu-container {
-        justify-content: center;
-    }
-
-    .footer-bottom-menu-list li a {
-        font-size: 14px;
-    }
-
-    .menu-about-menu-container {
-        padding: 0 18px;
-        flex-direction: column;
+    .footer-top-right {
+        grid-template-columns: 1fr 1.5fr;
         gap: 20px;
     }
 
-    .footer-bottom-menu {
-        background: rgba(240, 243, 245, 1);
-        padding: 32px 0 16px;
-        border: none;
-    }
-
-    ul.footer-social-share.for-mobile {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .footer-social-share li a {
-        width: 48px;
-        height: 48px;
-        padding: 14px;
-    }
-
-    .company-deck {
-        margin-top: 0px;
-        background: rgba(240, 243, 245, 1);
-    }
-
-    .copyright-text.for-mobile {
-        display: block;
-        text-align: center;
-        font-size: 14px;
-        margin-bottom: 15px;
-        padding: 0 40px;
-    }
-
-    h4.company-deck-link svg {
-        width: 15px;
-    }
-
-    .copyright-text.for-mobile a {
-        font-size: 14px;
-    }
-
-    .company-deck-link {
-        font-size: 16px;
-        justify-content: center;
-        padding-bottom: 32px;
-        padding-top: 32px;
-        border-bottom: 1px solid #ddd;
+    .footer-column-title {
         margin-bottom: 20px;
     }
 
-
-     /* Blog Details page Css */
-  
-     .blog-main-title {
-        font-size: 28px;
-        line-height: 1.2em;
+    ul.footer-list li a {
+        font-size: 16px;
     }
 
-       .breadcrumb-wrap {
-        padding: 40px 0 40px;
+    .footer-middle-area {
+        gap:20px;
     }
 
-    .thumbnail img {
-        max-height: 250px;
-        min-height: 250px;
-    }
 
-     .blog-single-content-wrap .entry-content{
-        h2 {
-            font-size: 28px;
-            line-height: 1.2em;
-            margin-bottom: 15px;
-            padding-top: 30px;
-            margin-top: 30px;
-        }
-
-        h3{
-            font-size: 24px;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-    
-        p{
-            margin-bottom: 15px;
-            font-size: 16px;
-        }
-        
-        ul{
-            padding-left: 15px;
-            margin-bottom: 15px;
-        }
-        ol{
-            padding-left: 15px;
-        }
-        
-        .wp-block-image img{
-            display: block;
-            width: 100%;
-        }
-    }
-
-    #musemind_booking_widget-2 {
-        margin-bottom: 0;
-    }
-
-    .booking-container h3 {
-        padding-right: 0px;
-        font-size: 20px;
-        margin-top: 40px;
-    }
-    
-
-    aside#secondary.widget-area {
-        padding-top: 15px;
-    }
 
 }

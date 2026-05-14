@@ -285,24 +285,25 @@ p {
   Footer Area CSS
 ========================*/
 .footer-section{
-  padding-top: 140px;
+  padding-top: 90px;
+  padding-bottom: 40px;
   background: rgba(0, 0, 0, 1);
 }
 
 .footer-top-area {
     display: grid;
-    grid-template-columns: 1fr 1.6fr;
+    grid-template-columns: 1fr 1.5fr;
     justify-content: space-between;
-    padding-bottom: 38px;
+    padding-bottom: 80px;
     gap: 460px;
 }
 
-.footer-logo .site-logo {
+.footer-logo a.custom-logo-link {
     display: block;
     max-width: 120px;
 }
 
-.footer-logo .site-logo img {
+.footer-logo .custom-logo-link img {
     width: 100%;
     height: auto;
 }
@@ -310,14 +311,14 @@ p {
 .footer-description {
     color: rgba(255, 255, 255, 1);
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 300;
     margin-top: 26px;
     line-height: 1.5em;
 }
 
 .footer-top-right{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     gap: 50px;
 }
 
@@ -325,7 +326,7 @@ p {
 .footer-column-title {
     color: rgba(255, 255, 255, .7);
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 24px;
 }
 
@@ -338,7 +339,7 @@ p {
 .footer-list li a {
     color: #fff;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 300;
     transition: all .3s ease-in-out;
 }
 
@@ -356,7 +357,7 @@ p {
 .footer-contact-info-list a {
     color: #fff;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 300;
     transition: all .3s ease-in-out;
 }
 
@@ -366,12 +367,15 @@ p {
 
 .contact-location {
     color: #fff;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 18px;
+}
+/* Footer copyright */
+.copyright-text {
+    color: #fff;
 }
 
 /* footer social */
-
 .footer-middle-area {
     display: flex;
     align-items: center;
@@ -379,32 +383,6 @@ p {
     border-top: 1px solid rgba(252, 250, 19, 0.3);
     border-bottom: 1px solid rgba(252, 250, 19, 0.3);
     padding: 20px 0;
-}
-
-.download-resume-link {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: all .3s ease-in-out;
-}
-
-.download-resume-link:hover {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.download-resume-link svg path {
-    background: rgba(252, 250, 19, 1);
-}
-
-.download-resume-link svg rect {
-    fill: rgba(252, 250, 19, 1);
-}
-
-.download-resume-link svg path {
-    fill: #000;
 }
 
 .footer-social-share {
@@ -436,35 +414,6 @@ p {
 
 .footer-social-share li a:hover img{
     filter: invert(100%);
-}
-
-.footer-bottom-menu {
-    padding: 30px 0 40px;
-}
-
-.menu-about-menu-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-ul.footer-bottom-menu-list {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.company-deck {
-    margin-top: 73px;
-}
-
-.company-deck-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 18px;
-    line-height: 1em;
-    font-weight: 400;
 }
 
 
