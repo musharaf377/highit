@@ -35,6 +35,8 @@
     $page_container_meta = Highlt_Group_Fields_Value::page_container('highlt', 'header_options');
     ?>
 
+    <div id="smooth-wrapper">
+    <div id="smooth-content">
     <div id="page" class="site">
         <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'highlt'); ?></a>
         <header id="masthead" class="site-header">

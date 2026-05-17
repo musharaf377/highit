@@ -2,6 +2,19 @@
  * Theme Main Scripts
  * @since 1.0.0
  */
+
+// ScrollSmoother init
+if (typeof ScrollSmoother !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  ScrollSmoother.create({
+    wrapper: '#smooth-wrapper',
+    content: '#smooth-content',
+    smooth: 1.5,
+    effects: true,
+    smoothTouch: 0.1,
+  });
+}
+
 (function ($) {
   "use strict";
 

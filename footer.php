@@ -19,6 +19,9 @@ $page_container_meta = Highlt_Group_Fields_Value::page_container('highlt', 'head
 
 </div><!-- #page -->
 
+    </div><!-- #smooth-content -->
+    </div><!-- #smooth-wrapper -->
+
 <?php wp_footer(); ?>
 </body>
 
