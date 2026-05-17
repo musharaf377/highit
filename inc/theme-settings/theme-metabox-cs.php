@@ -91,6 +91,13 @@ if (class_exists('CSF')) {
                 ),
             ),
             array(
+                'id' => 'portfolio_video_title',
+                'type' => 'text',
+                'title' => esc_html__('Video Title', 'highlt'),
+                'desc' => wp_kses(__('enter <mark>video title</mark> to show in frontend', 'highlt'), $allowed_html),
+                'dependency' => array('option_video', '==', '1'),
+            ),
+            array(
                 'id' => 'portfolio_video_url',
                 'type' => 'text',
                 'title' => esc_html__('Video URL', 'highlt'),
