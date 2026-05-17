@@ -330,19 +330,19 @@ if (class_exists('CSF')) {
    --------------------------------------------------------*/
 	CSF::createSection($prefix . '_theme_options', array(
 		'id'    => 'headers_settings',
-		'title' => esc_html__('Headers', 'highlt'),
+		'title' => esc_html__('Header', 'highlt'),
 		'icon'  => 'fa fa-home'
 	));
 	/* Header Style 01 */
 	CSF::createSection($prefix . '_theme_options', array(
-		'title'  => esc_html__('Header One', 'highlt'),
+		'title'  => esc_html__('Header', 'highlt'),
 		'id'     => 'theme_header_one_options',
 		'icon'   => 'fa fa-image',
 		'parent' => 'headers_settings',
 		'fields' => array(
 			array(
 				'type'    => 'subheading',
-				'content' => '<h3>' . esc_html__('Logo Options', 'highlt') . '</h3>'
+				'content' => '<h3>' . esc_html__('Header Options', 'highlt') . '</h3>'
 			),
 			array(
 				'id'      => 'header_one_logo',
@@ -350,7 +350,19 @@ if (class_exists('CSF')) {
 				'title'   => esc_html__('Logo', 'highlt'),
 				'library' => 'image',
 				'desc'    => wp_kses(__('you can upload <mark> logo</mark> here it will overwrite customizer uploaded logo', 'highlt'), $allowed_html),
-			)
+			),
+			array(
+				'id'    => 'header_button_text',
+				'type'  => 'text',
+				'title' => esc_html__('Button Text', 'highlt'),
+				'desc'  => wp_kses(__('Enter the <mark>button label</mark> to display in the header', 'highlt'), $allowed_html),
+			),
+			array(
+				'id'    => 'header_button_url',
+				'type'  => 'text',
+				'title' => esc_html__('Button URL', 'highlt'),
+				'desc'  => wp_kses(__('Enter the <mark>button link</mark> for the header button', 'highlt'), $allowed_html),
+			),
 		)
 	));
 

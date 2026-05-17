@@ -51,8 +51,8 @@
                     <span></span>
                     <span></span>
                     <span></span>
-                    <a class="contact-btn" href="#">
-                        <p>Contact Us</p>
+                    <a class="contact-btn" href="<?php echo esc_url(cs_get_option('header_button_url', '#')); ?>">
+                        <p><?php echo esc_html(cs_get_option('header_button_text', __('Contact Us', 'highlt'))); ?></p>
                         <?php echo highlt_get_svg_icon('right_arrow'); ?>
                     </a>    
                 </div>
