@@ -760,3 +760,62 @@ aside#secondary.widget-area {
 .booking-container a:hover{
     background: rgb(240, 243, 245);
 }
+
+/* Contact Form CSS Start */
+.contact-input-wrap {
+    margin-bottom: 20px;
+}
+
+.contact-input-wrap label {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    display: block;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.contact-input-wrap textarea,
+.contact-input-wrap input {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 10px 15px;
+    border: 1px solid #EAECF0;
+    border-radius: 0;
+    width: 100%;
+}
+
+.contact-input-wrap textarea {
+	height: 130px;
+}
+
+.contact-input-wrap.submit-wrap .wpcf7-submit {
+    padding: 20px;
+    background: #FCFA13;
+    border: none;
+	transition: all 0.3s;
+}
+
+.contact-input-wrap.submit-wrap .wpcf7-submit:hover {
+    background: #dbda1f;
+}
+
+.contact-input-wrap input:not([type="submit"]):focus {
+    outline: 1px solid #000;
+}
+
+.contact-input-wrap.submit-wrap  .wpcf7-spinner {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+}
+
+.contact-input-wrap .wpcf7-not-valid-tip {
+    margin-top: 3px;
+}
+
+.contact-input-wrap.submit-wrap {
+    margin: 0;
+}
+/* Contact Form CSS End */
