@@ -34,28 +34,43 @@
 
 
   /**
-     * Mobile menu click function
-     */
-    $(document).on("click", ".navbar-toggler", function () {
-      $(this).toggleClass("active");
-      $("#homiberia_main_menu").collapse("toggle");
+   * Mobile menu toggle
+   */
+  $(document).on("click", ".mobile-navbar-toggler", function () {
+    $(this).toggleClass("active");
+    $("#highlt_main_menu").toggleClass("show");
 
-      // Close menu when a nav link is clicked
-      $('#homiberia_main_menu .nav-link').on('click', function () {
-        $('#homiberia_main_menu').collapse('hide');
-        $('.navbar-toggler').removeClass('active');
-      });
-
-      // Ensure the navbar collapses when clicking outside
-      $(document).on('click.homiberiaCollapse', function (e) {
-        if (!$(e.target).closest('#homiberia_main_menu').length &&
-          !$(e.target).closest('.navbar-toggler').length) {
-          $("#homiberia_main_menu").collapse('hide');
-          $('.navbar-toggler').removeClass('active');
-          $(document).off('click.homiberiaCollapse');
-        }
-      });
+    $(document).on('click.highltCollapse', function (e) {
+      if (!$(e.target).closest('#highlt_main_menu').length &&
+        !$(e.target).closest('.mobile-navbar-toggler').length) {
+        $("#highlt_main_menu").removeClass("show");
+        $('.mobile-navbar-toggler').removeClass('active');
+        $(document).off('click.highltCollapse');
+      }
     });
+  });
+
+  // Close menu when a leaf nav-link is clicked (not a parent toggle)
+  $(document).on('click', '#highlt_main_menu .nav-link', function () {
+    if (!$(this).closest('.menu-item-has-children').length) {
+      $("#highlt_main_menu").removeClass("show");
+      $('.mobile-navbar-toggler').removeClass('active');
+    }
+  });
+
+  /**
+   * Mobile dropdown expand on click
+   */
+  $(document).on('click', '#highlt_main_menu .menu-item-has-children > a', function (e) {
+    if ($(window).width() <= 1199) {
+      e.preventDefault();
+      var $parent = $(this).parent();
+      $parent.siblings('.menu-item-has-children').removeClass('menu-open')
+        .find('> .sub-menu').slideUp(250);
+      $parent.toggleClass('menu-open');
+      $parent.find('> .sub-menu').slideToggle(250);
+    }
+  });
 
 
 

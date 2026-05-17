@@ -7,42 +7,42 @@
 */
 
 :root {
-  --main-color-one: rgba(13, 22, 35, 1);
-  --secondary-color: rgba(240, 243, 245, 1);
-  --heading-color: rgba(13, 22, 35, 1);
-  --paragraph-color: rgba(13, 22, 35, 1);
-  --heading-font: "Inter Tight", sans-serif;
-  --body-font: "Inter Tight", sans-serif;
-  --animate-duration: 800ms;
-  --animate-delay: 0.9s;
+    --main-color-one: rgba(13, 22, 35, 1);
+    --secondary-color: rgba(240, 243, 245, 1);
+    --heading-color: rgba(13, 22, 35, 1);
+    --paragraph-color: rgba(13, 22, 35, 1);
+    --heading-font: "Inter Tight", sans-serif;
+    --body-font: "Inter Tight", sans-serif;
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
 }
 
 @font-face {
-  font-family: "Inter Tight", sans-serif;
-  src: url("../fonts/InterTight-Light.ttf");
-  font-style: normal;
-  font-display: swap;
+    font-family: "Inter Tight", sans-serif;
+    src: url("../fonts/InterTight-Light.ttf");
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "Inter Medium", sans-serif;
-  src: url("../fonts/InterTight-Medium.ttf");
-  font-style: normal;
-  font-display: swap;
+    font-family: "Inter Medium", sans-serif;
+    src: url("../fonts/InterTight-Medium.ttf");
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "Inter SemiBold", sans-serif;
-  src: url("../fonts/InterTight-SemiBold.ttf");
-  font-style: normal;
-  font-display: swap;
+    font-family: "Inter SemiBold", sans-serif;
+    src: url("../fonts/InterTight-SemiBold.ttf");
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "Inter Bold", sans-serif;
-  src: url("../fonts/InterTight-Bold.ttf");
-  font-style: normal;
-  font-display: swap;
+    font-family: "Inter Bold", sans-serif;
+    src: url("../fonts/InterTight-Bold.ttf");
+    font-style: normal;
+    font-display: swap;
 }
 
 
@@ -50,23 +50,23 @@
     #1 Global CSS 
  ------------------- */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .elementor-element.elementor-widget.elementor-widget-text-editor p {
-  font-size: inherit !important;
+    font-size: inherit !important;
 }
 
 body,
 p,
 a {
-  font-family: var(--body-font);
-  font-size: 16px;
-  line-height: 1.5em;
-  color: var(--paragraph-color);
-  font-weight: 400;
+    font-family: var(--body-font);
+    font-size: 16px;
+    line-height: 1.5em;
+    color: var(--paragraph-color);
+    font-weight: 400;
 }
 
 h1,
@@ -75,19 +75,19 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--heading-font);
-  color: var(--heading-color);
-  line-height: 1.1em;
-  margin: 0;
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+    line-height: 1.1em;
+    margin: 0;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 p {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 input[type="text"]:focus,
@@ -103,43 +103,43 @@ input[type="reset"]:focus,
 input[type="submit"]:focus,
 select:focus,
 button:focus {
-  outline: none;
-  box-shadow: none;
+    outline: none;
+    box-shadow: none;
 }
 
 ul,
 ol,
 p {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .container {
-  width: 100%;
-  max-width: 1390px;
-  margin: 0 auto;
-  padding: 0 15px;
+    width: 100%;
+    max-width: 1390px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 /*-------------------------
     #2 Preloader Css
 ---------------------------*/
 .preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999999;
-  background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999999;
+    background: #fff;
 }
 
 .preloader svg {
-  width: 200px;
+    width: 200px;
 }
 
 /*---------------
@@ -153,24 +153,24 @@ p {
     z-index: 9999;
 }
 
-.navbar.navbar-area .container{
+.navbar.navbar-area .container {
     max-width: 1350px;
     padding: 0 15px;
 }
 
 #masthead .navbar {
-  padding: 20px 0px;
+    padding: 20px 0px;
 }
 
 #masthead .header-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 30px;
-  width: 100%;
-  padding: 14px;
-  position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    padding: 14px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 #masthead .header-wrapper::after {
@@ -185,7 +185,7 @@ p {
     z-index: -1;
 }
 
-.header-wrapper .logo-wrapper a{
+.header-wrapper .logo-wrapper a {
     display: block;
     max-width: 80px;
 }
@@ -195,93 +195,109 @@ p {
     height: auto;
 }
 
-#highlt_main_menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (min-width: 1200px) {
+    #highlt_main_menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 #masthead .header-wrapper .navbar-nav {
-  display: flex;
-  align-items: center;
-  gap: 28px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
 }
 
 #masthead .header-wrapper li a {
-  font-size: 16px;
-  transition: all .3s ease-in-out;
-  color:rgba(255, 255, 255, 1);
+    font-size: 16px;
+    transition: all .3s ease-in-out;
+    color: rgba(255, 255, 255, 1);
 }
 
 #masthead .header-wrapper li a:hover {
-  color: #FBFD2E;
+    color: #FBFD2E;
 }
 
 .navbar-collapse {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 /* Header Button */
-.contact-btn-wrap{
-    position:relative;
-    display:inline-block;
+.contact-btn-wrap {
+    position: relative;
+    display: inline-block;
 }
 
 /* Yellow Corner Borders */
-.contact-btn-wrap span{
-    position:absolute;
-    width:12px;
-    height:12px;
-    border-color:#f4ff00;
-    border-style:solid;
+.contact-btn-wrap span {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-color: #f4ff00;
+    border-style: solid;
     opacity: 0;
     transition: all .3s;
-    
+
+}
+
+.mobile-navbar-toggler {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 36px;
+}
+
+.mobile-navbar-toggler svg {
+    width: 1em;
+    height: 1em;
 }
 
 /* Top Left */
-.contact-btn-wrap span:nth-child(1){
-    top:-4px;
-    left:-4px;
+.contact-btn-wrap span:nth-child(1) {
+    top: -4px;
+    left: -4px;
     border-width: 1px 0 0 1px;
 }
 
 /* Top Right */
-.contact-btn-wrap span:nth-child(2){
-    top:-4px;
-    right:-4px;
-    border-width:1px 1px 0 0;
+.contact-btn-wrap span:nth-child(2) {
+    top: -4px;
+    right: -4px;
+    border-width: 1px 1px 0 0;
 }
 
 /* Bottom Left */
-.contact-btn-wrap span:nth-child(3){
-    bottom:-4px;
-    left:-4px;
-    border-width:0 0 1px 1px;
+.contact-btn-wrap span:nth-child(3) {
+    bottom: -4px;
+    left: -4px;
+    border-width: 0 0 1px 1px;
 }
 
 /* Bottom Right */
-.contact-btn-wrap span:nth-child(4){
-    bottom:-4px;
-    right:-4px;
-    border-width:0 1px 1px 0;
+.contact-btn-wrap span:nth-child(4) {
+    bottom: -4px;
+    right: -4px;
+    border-width: 0 1px 1px 0;
 }
 
 /* Main Button */
-.contact-btn{
+.contact-btn {
     padding: 14px 18px;
-    background:#efefef;
-    border:none;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    color:#000;
-    cursor:pointer;
-    transition:0.3s ease;
+    background: #efefef;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #000;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-.contact-btn-wrap:hover span{
+.contact-btn-wrap:hover span {
     opacity: 1;
 }
 
@@ -289,10 +305,10 @@ p {
 /*======================
   Footer Area CSS
 ========================*/
-.footer-section{
-  padding-top: 90px;
-  padding-bottom: 40px;
-  background: rgba(0, 0, 0, 1);
+.footer-section {
+    padding-top: 90px;
+    padding-bottom: 40px;
+    background: rgba(0, 0, 0, 1);
 }
 
 .footer-top-area {
@@ -321,7 +337,7 @@ p {
     line-height: 1.5em;
 }
 
-.footer-top-right{
+.footer-top-right {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 50px;
@@ -335,7 +351,7 @@ p {
     margin-bottom: 24px;
 }
 
-.footer-list{
+.footer-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -375,6 +391,7 @@ p {
     font-weight: 300;
     font-size: 18px;
 }
+
 /* Footer copyright */
 .copyright-text {
     color: #fff;
@@ -412,12 +429,12 @@ p {
     background: #fff;
 }
 
-.footer-social-share li a img{
+.footer-social-share li a img {
     filter: invert(0%);
     transition: all .3s ease-in-out;
 }
 
-.footer-social-share li a:hover img{
+.footer-social-share li a:hover img {
     filter: invert(100%);
 }
 
@@ -430,7 +447,7 @@ p {
     padding: 88px 0 56px;
 }
 
-.breadcrumb-wrap .breadcrumb-content{
+.breadcrumb-wrap .breadcrumb-content {
     max-width: 930px;
 }
 
@@ -464,7 +481,7 @@ p {
     border-radius: 50%;
 }
 
-.post-meta span:last-child::after{
+.post-meta span:last-child::after {
     display: none;
 }
 
@@ -476,11 +493,12 @@ p {
     font-weight: 500;
 }
 
-.blog-main-title{
+.blog-main-title {
     font-size: 48px;
     font-weight: 500;
     margin: 24px 0 12px;
 }
+
 .musemind-header-wrap.blog-single {
     background: #010217;
     margin-top: -120px;
@@ -488,7 +506,7 @@ p {
     padding-bottom: 84px;
 }
 
-.blog-details-top{
+.blog-details-top {
     width: 760px;
 }
 
@@ -503,7 +521,8 @@ p {
     text-transform: uppercase;
     margin-bottom: 20px;
 }
-.breadcurm-head{
+
+.breadcurm-head {
     letter-spacing: 2px;
 }
 
@@ -560,7 +579,7 @@ ul.post-categories {
     padding-bottom: 160px;
 }
 
-.blog-single-content-wrap .entry-content{
+.blog-single-content-wrap .entry-content {
     h2 {
         font-size: 32px;
         color: rgba(13, 22, 35, 1);
@@ -570,27 +589,29 @@ ul.post-categories {
         padding-top: 48px;
         border-top: 1px solid #ddd;
     }
-    h3{
+
+    h3 {
         font-size: 24px;
         font-weight: 500;
         margin-bottom: 18px;
         margin-top: 28px;
     }
 
-    p{
+    p {
         margin-bottom: 20px;
         font-size: 18px;
         color: rgba(110, 115, 123, 1);
         font-weight: 300;
         line-height: 1.6em;
     }
-    
-    ul{
+
+    ul {
         list-style-type: disc;
         padding-left: 20px;
         margin-bottom: 20px;
     }
-    ol{
+
+    ol {
         padding-left: 20px;
     }
 
@@ -599,7 +620,8 @@ ul.post-categories {
         overflow: hidden;
         margin-bottom: 20px;
     }
-    .wp-block-image img{
+
+    .wp-block-image img {
         display: block;
         width: 100%;
     }
@@ -615,7 +637,8 @@ ul.post-categories {
 
 .entry-content.musemind-post-content h2:first-of-type {
     margin-top: 0px;
-  }
+}
+
 .entry-content.musemind-post-content {
     margin-right: 120px;
 }
@@ -647,11 +670,11 @@ div#musemind_toc_widget-2 {
     border-bottom: 1px solid rgba(223, 224, 226, 1);
 }
 
-.toc-container .toc-widget li:last-child a{
+.toc-container .toc-widget li:last-child a {
     border-bottom: none;
 }
-    
-.toc-widget .arrow-link:hover{
+
+.toc-widget .arrow-link:hover {
     color: rgba(13, 22, 35, 1);
     font-weight: 600;
 }
@@ -688,7 +711,7 @@ ul.social-icon li a {
     transition: all .3s ease-in-out;
 }
 
-.social-icon li a svg path{
+.social-icon li a svg path {
     fill: #0B0919;
     transition: all .3s ease-in-out;
 }
@@ -697,7 +720,7 @@ ul.social-icon li a:hover {
     background: rgba(13, 22, 35, 1);
 }
 
-ul.social-icon li a:hover svg path{
+ul.social-icon li a:hover svg path {
     fill: #fff;
 }
 
@@ -712,7 +735,7 @@ aside#secondary.widget-area {
 }
 
 /* Booking Widget */
-.booking-area{
+.booking-area {
     position: relative;
     background-color: #000;
     padding: 24px;
@@ -751,13 +774,14 @@ aside#secondary.widget-area {
     transition: all .3s ease-in-out;
     color: rgba(80, 85, 94, 1);
 }
+
 .star-shape-img {
     position: absolute;
     bottom: 0;
     right: 0;
 }
 
-.booking-container a:hover{
+.booking-container a:hover {
     background: rgb(240, 243, 245);
 }
 
@@ -787,14 +811,14 @@ aside#secondary.widget-area {
 }
 
 .contact-input-wrap textarea {
-	height: 130px;
+    height: 130px;
 }
 
 .contact-input-wrap.submit-wrap .wpcf7-submit {
     padding: 20px;
     background: #FCFA13;
     border: none;
-	transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .contact-input-wrap.submit-wrap .wpcf7-submit:hover {
@@ -805,7 +829,7 @@ aside#secondary.widget-area {
     outline: 1px solid #000;
 }
 
-.contact-input-wrap.submit-wrap  .wpcf7-spinner {
+.contact-input-wrap.submit-wrap .wpcf7-spinner {
     position: absolute;
     bottom: -30px;
     left: 0;
@@ -818,4 +842,5 @@ aside#secondary.widget-area {
 .contact-input-wrap.submit-wrap {
     margin: 0;
 }
+
 /* Contact Form CSS End */
