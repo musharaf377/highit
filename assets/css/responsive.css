@@ -140,7 +140,9 @@
   ======================== */
 
 @media (max-width: 768px) {
-
+    #masthead .navbar {
+        padding: 12px 0px;
+    }
 
     .footer-section {
         padding-top: 60px;

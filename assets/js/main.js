@@ -3,15 +3,22 @@
  * @since 1.0.0
  */
 
-// ScrollSmoother init
+// ScrollSmoother + sticky header init
 if (typeof ScrollSmoother !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
   ScrollSmoother.create({
     wrapper: '#smooth-wrapper',
     content: '#smooth-content',
     smooth: 1.5,
     effects: true,
     smoothTouch: 0.1,
+  });
+
+  ScrollTrigger.create({
+    start: 'top -80',
+    onEnter: function () { document.getElementById('masthead').classList.add('header-sticky'); },
+    onLeaveBack: function () { document.getElementById('masthead').classList.remove('header-sticky'); },
   });
 }
 

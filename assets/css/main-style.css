@@ -150,11 +150,16 @@ p {
     #3 Nav bar
 ----------------- */
 #masthead {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 9999;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+#masthead.header-sticky .header-wrapper::after {
+    background: rgba(14, 14, 15, 0.92);
 }
 
 .navbar.navbar-area .container {
