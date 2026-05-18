@@ -221,11 +221,11 @@ p {
 #masthead .header-wrapper li a {
     font-size: 16px;
     transition: all .3s ease-in-out;
-    color: rgba(255, 255, 255, 1);
+    color: #FCFA13;
 }
 
 #masthead .header-wrapper li a:hover {
-    color: #FBFD2E;
+    color: #e0e331;
 }
 
 .navbar-collapse {
@@ -243,7 +243,7 @@ p {
     position: absolute;
     width: 12px;
     height: 12px;
-    border-color: #f4ff00;
+    border-color: #fff;
     border-style: solid;
     opacity: 0;
     transition: all .3s;
@@ -295,13 +295,13 @@ p {
 /* Main Button */
 .contact-btn {
     padding: 14px 18px;
-    background: #efefef;
+    background: #FCFA13;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    color: #000;
+    color: #050000;
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -325,7 +325,7 @@ p {
     grid-template-columns: 1fr 1.5fr;
     justify-content: space-between;
     padding-bottom: 80px;
-    gap: 460px;
+    gap: 440px;
 }
 
 .footer-logo a.custom-logo-link {
@@ -411,8 +411,8 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid rgba(252, 250, 19, 0.3);
-    border-bottom: 1px solid rgba(252, 250, 19, 0.3);
+    border-top: 1px solid rgba(252, 250, 19, 0.15);
+    border-bottom: 1px solid rgba(252, 250, 19, 0.15);
     padding: 20px 0;
 }
 
