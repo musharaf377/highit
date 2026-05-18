@@ -243,7 +243,8 @@
     }
 
     .footer-middle-area {
-        gap: 20px;
+        gap: 15px;
+        flex-direction: column-reverse;
     }
 
 
