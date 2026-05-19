@@ -348,7 +348,7 @@ p {
 
 .footer-top-right {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr auto;
     gap: 50px;
 }
 
