@@ -60,7 +60,6 @@
 }
 
 body,
-p,
 a {
     font-family: var(--body-font);
     font-size: 16px;
@@ -92,6 +91,14 @@ a {
 
 p {
     margin-bottom: 0;
+}
+
+.elementor-widget-text-editor p a {
+    transition: all 0.3s;
+}
+
+.elementor-widget-text-editor p a:hover {
+    color: #FCFA13;
 }
 
 input[type="text"]:focus,
