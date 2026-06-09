@@ -14,83 +14,124 @@
     }
 
 }
+
 /* =======================
     Mini Desktop Responsive Css
   ======================== */
-@media (max-width: 991px) {
 
-    /* Nav bar area */
-    .responsive-mobile-menu {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    button.navbar-toggler {
-        width: 40px;
-        height: 40px;
-        justify-content: center;
-        display: flex;
-    }
-
-    button.navbar-toggler span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    button.navbar-toggler:focus {
-        box-shadow: none;
-    }
-
-    ul#menu-primary-menu li {
-        width: 100%;
-    }
-
-    #masthead #menu-primary-menu {
-        gap: 10px;
-    }
-
-
-    button.navbar-toggler.active {
-        background: #6b1635;
-        color: #fff;
-    }
-
-    button.navbar-toggler.active .navbar-toggler-icon svg path {
-        fill: #FFF;
-        stroke: #fff;
-    }
-
-    /* Hide the menu by default on mobile */
-    #musemind_main_menu.collapse:not(.show) {
+/* Desktop (> 1199px): hide mobile toggler, keep nav visible */
+@media (min-width: 1200px) {
+    .mobile-navbar-toggler {
         display: none;
     }
 
-    #musemind_main_menu.collapsing {
-        height: 0;
-        overflow: hidden;
-        transition: height 0.35s ease;
+    #highlt_main_menu {
+        display: flex !important;
+    }
+}
+
+@media (max-width: 1199px) {
+
+    .mobile-navbar-toggler {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        flex-shrink: 0;
     }
 
-    /* Mobile menu styles */
-    #musemind_main_menu {
+    .mobile-navbar-toggler:focus {
+        outline: none;
+    }
+
+    .mobile-navbar-toggler.active svg path {
+        stroke: #FBFD2E;
+    }
+
+    /* Hide the menu by default on mobile */
+    #highlt_main_menu {
+        display: none !important;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background: #fff;
+        background: #0E0E0F;
         z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        padding: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        padding: 16px;
     }
 
-    #musemind_main_menu .navbar-nav {
+    #highlt_main_menu.show {
+        display: block !important;
+    }
+
+    #highlt_main_menu .navbar-nav {
         flex-direction: column;
+        gap: 0;
     }
 
-    #musemind_main_menu .nav-item {
-        margin: 5px 0;
+    #highlt_main_menu .nav-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    #highlt_main_menu .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    #highlt_main_menu .nav-item>a {
+        display: block;
+        padding: 12px 0;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Expand arrow for parent items */
+    #highlt_main_menu .menu-item-has-children>a::after {
+        content: '+';
+        float: right;
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    #highlt_main_menu .menu-item-has-children.menu-open>a::after {
+        content: '−';
+    }
+
+    /* Sub-menu hidden by default on mobile */
+    #highlt_main_menu .sub-menu {
+        display: none;
+        padding-left: 16px;
+        border-left: 2px solid #FBFD2E;
+        margin-bottom: 8px;
+    }
+
+    #highlt_main_menu .sub-menu li a {
+        display: block;
+        padding: 8px 0;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    #highlt_main_menu .sub-menu li a:hover {
+        color: #FBFD2E;
+    }
+
+    #masthead .header-wrapper {
+        justify-content: flex-start;
+    }
+
+    .header-btn {
+        margin-left: auto;
+    }
+
+    #masthead .header-wrapper .navbar-nav {
+        gap: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 
@@ -99,7 +140,9 @@
   ======================== */
 
 @media (max-width: 768px) {
-
+    #masthead .navbar {
+        padding: 12px 0px;
+    }
 
     .footer-section {
         padding-top: 60px;
@@ -110,7 +153,7 @@
         max-width: 90px;
     }
 
-   .footer-description {
+    .footer-description {
         font-size: 16px;
     }
 
@@ -139,7 +182,7 @@
     .footer-menu-wrap .footer-list {
         gap: 10px;
     }
-    
+
     .footer-contact-info-list {
         gap: 10px;
     }
@@ -164,14 +207,20 @@
     Mobile Responsive Css
   ======================== */
 @media (max-width: 576px) {
+    .header-btn {
+        display: none;
+    }
 
+    .mobile-navbar-toggler {
+        margin-left: auto;
+    }
 
     .footer-top-area {
         grid-template-columns: 1fr;
         padding-bottom: 40px;
     }
 
-     .footer-section {
+    .footer-section {
         padding-top: 40px;
         padding-bottom: 20px;
     }
@@ -194,7 +243,8 @@
     }
 
     .footer-middle-area {
-        gap:20px;
+        gap: 15px;
+        flex-direction: column-reverse;
     }
 
     .header-btn.mobile-contact-btn{

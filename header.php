@@ -35,10 +35,13 @@
     $page_container_meta = Highlt_Group_Fields_Value::page_container('highlt', 'header_options');
     ?>
 
+    <header id="masthead" class="site-header">
+        <?php get_template_part('template-parts/header/header', $page_container_meta['navbar_type']); ?>
+    </header><!-- #masthead -->
+
+    <div id="smooth-wrapper">
+    <div id="smooth-content">
     <div id="page" class="site">
         <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'highlt'); ?></a>
-        <header id="masthead" class="site-header">
-            <?php get_template_part('template-parts/header/header', $page_container_meta['navbar_type']); ?>
-        </header><!-- #masthead -->
         <?php do_action('highlt_before_page_content') ?>
         <div id="content" class="site-content">

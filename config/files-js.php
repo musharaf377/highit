@@ -5,7 +5,7 @@ $js_files = array(
         'handle' => 'bootstrap',
         'src' => HIGHLT_JS . '/bootstrap.min.js',
         'deps' => array('jquery'),
-        'in_footer' => true // This ensures the script is loaded in the footer
+        'in_footer' => true
     ),
     array(
         'handle' => 'preloader',
@@ -20,9 +20,27 @@ $js_files = array(
         'in_footer' => true
     ),
     array(
+        'handle' => 'gsap',
+        'src' => HIGHLT_JS . '/gsap.min.js',
+        'deps' => array(),
+        'in_footer' => true
+    ),
+    array(
+        'handle' => 'gsap-scroll-trigger',
+        'src' => HIGHLT_JS . '/ScrollTrigger.min.js',
+        'deps' => array('gsap'),
+        'in_footer' => true
+    ),
+    array(
+        'handle' => 'gsap-scroll-smoother',
+        'src' => HIGHLT_JS . '/ScrollSmoother.min.js',
+        'deps' => array('gsap', 'gsap-scroll-trigger'),
+        'in_footer' => true
+    ),
+    array(
         'handle' => 'highlt-main-script',
         'src' => HIGHLT_JS . '/main' . $js_ext,
-        'deps' => array('jquery'),
+        'deps' => array('jquery', 'gsap', 'gsap-scroll-trigger', 'gsap-scroll-smoother'),
         'in_footer' => true
     ),
 );

@@ -96,7 +96,7 @@ $copyright_text = str_replace('{year}', date('Y'), $copyright_text);
                     foreach ($footer_social_icons as $icon) :
                 ?>
                         <li class="single-info-item">
-                            <a href="<?php echo esc_url($icon['footer_social_icon_item_url']); ?>">
+                            <a href="<?php echo esc_url($icon['footer_social_icon_item_url']); ?>" target="_blank">
                                 <img src="<?php echo esc_url($icon['footer_social_icon_item_icon']['url']); ?>" alt="<?php echo esc_attr($icon['footer_social_icon_item_icon']['alt']); ?>" />
                             </a>
                         </li>
