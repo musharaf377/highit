@@ -285,6 +285,10 @@ p {
     opacity: 1;
 }
 
+.header-btn.mobile-contact-btn{
+        display: none;
+}
+
 
 /*======================
   Footer Area CSS

@@ -43,6 +43,20 @@
                     'container'      => false,
                 ));
                 ?>
+
+                <div class="header-btn mobile-contact-btn">
+                    <div class="contact-btn-wrap">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <a class="contact-btn" href="#">
+                            <p>Contact Us</p>
+                            <?php echo highlt_get_svg_icon('right_arrow'); ?>
+                        </a>    
+                    </div>
+                </div>
+
             </div>
 
             <div class="header-btn">
