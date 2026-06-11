@@ -248,9 +248,19 @@
     }
 
     .header-btn.mobile-contact-btn{
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
+    .header-btn.mobile-contact-btn .contact-btn{
+        padding: 10px 14px;
+
+    }
+
+    #highlt_main_menu {
+        padding-bottom: 24px;
+    }
 
 
 }
