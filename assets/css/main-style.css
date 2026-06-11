@@ -863,4 +863,86 @@ aside#secondary.widget-area {
     margin: 0;
 }
 
-/* Contact Form CSS End */
+/*-------------------------
+     404
+---------------------------*/
+.error404 .breadcrumb-wrap {
+    display: none;
+}
+
+.error-404-area {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 160px 0 120px;
+    overflow: hidden;
+}
+
+/* Soft radial glow behind the content */
+.error-404-area::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 760px;
+    height: 760px;
+    max-width: 100%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(252, 250, 19, 0.12) 0%, rgba(252, 250, 19, 0) 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.error-404.not-found {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 24px;
+    max-width: 640px;
+    margin: auto;
+}
+
+/* Big 404 number */
+.error-404-code {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: clamp(110px, 22vw, 240px);
+    line-height: 1;
+    letter-spacing: -4px;
+    color: #fff;
+}
+
+.error-404-code .error-404-zero {
+    color: #FCFA13;
+    text-shadow: 0 0 60px rgba(252, 250, 19, 0.5);
+}
+
+.error-404.not-found .title {
+    color: #fff;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 600;
+    line-height: 1.2em;
+    letter-spacing: -0.5px;
+}
+
+.error-404.not-found .paragraph {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6em;
+    max-width: 460px;
+}
+
+.error-404-btn-wrap {
+    margin-top: 12px;
+}

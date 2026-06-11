@@ -191,9 +191,6 @@
         font-size: 16px;
     }
 
-
-
-
     .footer-social-share li a {
         width: 32px;
         height: 32px;
@@ -262,5 +259,32 @@
         padding-bottom: 24px;
     }
 
+}
 
+/* =======================
+    404 Page Responsive Css
+  ======================== */
+@media (max-width: 768px) {
+    .error-404-area {
+        padding: 130px 0 90px;
+        min-height: 80vh;
+    }
+
+    .error-404.not-found {
+        gap: 18px;
+    }
+
+    .error-404.not-found .paragraph {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .error-404-area {
+        padding: 120px 0 70px;
+    }
+
+    .error-404-code {
+        letter-spacing: -2px;
+    }
 }

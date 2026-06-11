@@ -13,27 +13,25 @@ $get_404_options_value = Highlt_Group_Fields_Value::get_404_options_value();
 $error_bg = cs_get_option('error_bg');
 ?>
 
-<div id="primary" class="content-area error_page_content_area padding-top-110 padding-bottom-110">
+<div id="primary" class="content-area error-404-area">
     <main id="main" class="site-main">
-        <div class="container custom-container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="error-404 not-found">
-                        <?php if (!empty($error_bg)): ?>
-                            <div class="thumb">
-                                <img src="<?php echo esc_url($error_bg['url']) ?>"
-                                    alt="<?php echo esc_attr($error_bg['alt']) ?>">
-                            </div>
-                        <?php endif; ?>
-                        <h2 class="title"><?php echo esc_html($get_404_options_value['title']); ?></h2>
-                        <p class="paragraph"><?php echo esc_html($get_404_options_value['paragraph']); ?></p>
-                        <?php
-                        get_search_form();
-                        ?>
-                        <div class="btn-wrap desktop-center margin-top-30">
-                            <a class="boxed-btn"
-                                href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html($get_404_options_value['btn_text']); ?></a>
-                        </div>
+        <div class="container">
+            <div class="error-404 not-found">
+                <div class="error-404-code" aria-hidden="true">
+                    <span>4</span>
+                    <span class="error-404-zero">0</span>
+                    <span>4</span>
+                </div>
+               
+                <p class="paragraph"><?php echo esc_html($get_404_options_value['paragraph']); ?></p>
+                <div class="error-404-btn-wrap">
+                    <div class="contact-btn-wrap">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <a class="contact-btn"
+                            href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html($get_404_options_value['btn_text']); ?></a>
                     </div>
                 </div>
             </div>
