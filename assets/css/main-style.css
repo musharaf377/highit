@@ -863,6 +863,283 @@ aside#secondary.widget-area {
     margin: 0;
 }
 
+/* ====================
+    Blog Single (hero + content + TOC)
+=======================  */
+
+/* White reading surface so the dark article text stays legible
+   over the near-black site background. Scoped to the single template. */
+.single .blog-single-page {
+    background: #fff;
+}
+
+/* ---- Hero ---- */
+.blog-single-hero {
+    background: #040000;
+    padding: 200px 0 90px;
+}
+
+.blog-single-hero-inner {
+    max-width: 900px;
+}
+
+.blog-single-date span {
+    display: inline-block;
+    color: #FCFA13;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.blog-single-title {
+    color: #fff;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.15em;
+    letter-spacing: -1px;
+}
+
+.blog-single-excerpt {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.6em;
+    margin-top: 24px;
+}
+
+/* ---- Featured image ---- */
+.blog-single-thumb {
+    padding-top: 60px;
+}
+
+.blog-single-thumb img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 620px;
+    object-fit: cover;
+}
+
+/* ---- Content + TOC layout ---- */
+.blog-single-body {
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.blog-single-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 80px;
+    align-items: start;
+}
+
+.blog-single-layout.no-toc {
+    grid-template-columns: minmax(0, 820px);
+    justify-content: center;
+}
+
+/* First heading shouldn't carry the section divider/spacing. */
+.blog-single-content-wrap .entry-content h2:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+/* Offset anchor jumps so headings clear the fixed header. */
+.blog-single-content-wrap .entry-content h2 {
+    scroll-margin-top: 120px;
+}
+
+/* Inline links inside the article. */
+.blog-single-content-wrap .entry-content a {
+    color: var(--main-color-one);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity 0.3s ease;
+}
+
+.blog-single-content-wrap .entry-content a:hover {
+    opacity: 0.7;
+}
+
+/* Blockquote with the theme's yellow accent. */
+.blog-single-content-wrap .entry-content blockquote {
+    margin: 32px 0;
+    padding: 24px 28px;
+    border-left: 3px solid #FCFA13;
+    background: rgba(240, 243, 245, 1);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: rgba(13, 22, 35, 1);
+}
+
+.blog-single-content-wrap .entry-content blockquote p {
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
+    margin-bottom: 0;
+}
+
+.blog-single-content-wrap .entry-content figure {
+    margin: 0 0 20px;
+}
+
+.blog-single-content-wrap .entry-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Paged-post navigation (wp_link_pages). */
+.blog-single-content-wrap .wp-link-pages {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 40px;
+}
+
+.blog-single-content-wrap .wp-link-pages span,
+.blog-single-content-wrap .wp-link-pages a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #EAECF0;
+    color: rgba(13, 22, 35, 1);
+    transition: all 0.3s ease;
+}
+
+.blog-single-content-wrap .wp-link-pages a:hover,
+.blog-single-content-wrap .wp-link-pages > span {
+    background: #FCFA13;
+    border-color: #FCFA13;
+    text-decoration: none;
+}
+
+/* ---- Table of contents ---- */
+.blog-single-toc {
+    position: relative;
+}
+
+.blog-single-toc .toc-widget {
+    background: rgba(240, 243, 245, 1);
+    padding: 28px 24px;
+}
+
+.toc-title {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(13, 22, 35, 1);
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(13, 22, 35, 0.1);
+}
+
+.toc-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.toc-list .toc-link {
+    display: block;
+    font-size: 14px;
+    line-height: 1.5em;
+    color: rgba(80, 85, 94, 1);
+    padding: 10px 0 10px 16px;
+    border-left: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.toc-list .toc-link:hover {
+    color: rgba(13, 22, 35, 1);
+}
+
+.toc-list .toc-link.active {
+    color: rgba(13, 22, 35, 1);
+    font-weight: 600;
+    border-left-color: #FCFA13;
+}
+
+/* ---- Blog single responsive ---- */
+@media (max-width: 991px) {
+    .blog-single-hero {
+        padding: 150px 0 60px;
+    }
+
+    .blog-single-title {
+        font-size: 40px;
+    }
+
+    .blog-single-layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .blog-single-toc {
+        position: static;
+        top: auto;
+        order: -1;
+        margin-bottom: 40px;
+    }
+
+    .blog-single-body {
+        padding-top: 60px;
+        padding-bottom: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-single-hero {
+        padding: 120px 0 48px;
+    }
+
+    .blog-single-title {
+        font-size: 30px;
+    }
+
+    .blog-single-excerpt {
+        font-size: 16px;
+        margin-top: 18px;
+    }
+
+    .blog-single-thumb {
+        padding-top: 40px;
+    }
+
+    .blog-single-thumb img {
+        max-height: 360px;
+    }
+
+    .blog-single-body {
+        padding-top: 48px;
+        padding-bottom: 60px;
+    }
+
+    .blog-single-content-wrap .entry-content h2 {
+        font-size: 26px;
+        margin-top: 36px;
+        padding-top: 36px;
+    }
+
+    .blog-single-content-wrap .entry-content h3 {
+        font-size: 20px;
+    }
+
+    .blog-single-content-wrap .entry-content p,
+    .blog-single-content-wrap .entry-content blockquote {
+        font-size: 16px;
+    }
+}
+
 /*-------------------------
      404
 ---------------------------*/

@@ -8,47 +8,71 @@
  * @package highlt
  */
 
+// Use the custom single-post hero below instead of the default breadcrumb bar.
+if (class_exists('Highlt_Customize')) {
+    remove_action('highlt_before_page_content', array(Highlt_Customize::getInstance(), 'breadcrumb'));
+}
+
 get_header();
 $highlt = highlt();
-$page_layout_meta = Highlt_Group_Fields_Value::page_layout_options('blog_single');
-$full_width_class = $page_layout_meta['content_column_class'] === 'col-lg-12' ? ' full-width-content ' : '';
 if ($highlt->is_highlt_core_active()) {
     highlt_core()->setPostViews(get_the_ID());
 }
 ?>
-<div id="primary" class="content-area blog-content-page padding-bottom-120 padding-top-25 <?php echo esc_attr($full_width_class); ?>">
+<div id="primary" class="content-area blog-single-page">
     <main id="main" class="site-main">
-        <?php
-        if (has_post_thumbnail() || !empty($post_meta_gallery)):
-            $get_post_format = get_post_format();
-            if ('video' == $get_post_format || 'gallery' == $get_post_format) {
-                get_template_part('template-parts/content/thumbnail', $get_post_format);
-            } else {
-                get_template_part('template-parts/content/thumbnail');
-            }
-        endif;
+        <?php while (have_posts()) : the_post();
+            $excerpt = get_the_excerpt();
         ?>
 
-
-        <div class="blog-content-wrapper">
-            <div class="container custom-container">
-                <div class="row">
-                    <div class="<?php echo esc_attr($page_layout_meta['content_column_class']); ?>">
-                        <?php
-                        while (have_posts()) :
-                            the_post();
-                            get_template_part('template-parts/content', 'single');
-                        endwhile; // End of the loop.
-                        ?>
-                    </div>
-                    <?php if ($page_layout_meta['sidebar_enable']): ?>
-                        <div class="<?php echo esc_attr($page_layout_meta['sidebar_column_class']); ?>">
-                            <?php get_sidebar(); ?>
+            <!-- Hero -->
+            <section class="blog-single-hero">
+                <div class="container">
+                    <div class="blog-single-hero-inner">
+                        <div class="blog-single-date">
+                            <span><?php echo esc_html(get_the_date()); ?></span>
                         </div>
-                    <?php endif; ?>
+                        <h1 class="blog-single-title"><?php the_title(); ?></h1>
+                        <?php if ($excerpt) : ?>
+                            <p class="blog-single-excerpt"><?php echo esc_html($excerpt); ?></p>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured image -->
+            <?php if (has_post_thumbnail()) : ?>
+                <div class="blog-single-thumb">
+                    <div class="container">
+                        <?php the_post_thumbnail('full'); ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+
+            <!-- Content + Table of contents -->
+            <div class="blog-single-body">
+                <div class="container">
+                    <div class="blog-single-layout">
+                        <article id="post-<?php the_ID(); ?>" <?php post_class('blog-single-content-wrap'); ?>>
+                            <div class="entry-content js-toc-content">
+                                <?php
+                                the_content();
+                                $highlt->link_pages();
+                                ?>
+                            </div>
+                        </article>
+
+                        <aside class="blog-single-toc">
+                            <div class="toc-widget js-toc">
+                                <h2 class="toc-title"><?php esc_html_e('Table of Contents', 'highlt'); ?></h2>
+                                <ul class="toc-list js-toc-list"></ul>
+                            </div>
+                        </aside>
+                    </div>
                 </div>
             </div>
-        </div>
+
+        <?php endwhile; // End of the loop. ?>
     </main><!-- #main -->
 </div><!-- #primary -->
 <?php

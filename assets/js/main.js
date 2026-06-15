@@ -94,6 +94,118 @@ if (typeof ScrollSmoother !== 'undefined') {
 
 
 
+  /**
+   * Blog single — build the Table of Contents from <h2> headings,
+   * smooth-scroll on click and highlight the active section.
+   */
+  $(function () {
+    var $content = $('.js-toc-content');
+    var $toc = $('.js-toc');
+
+    if (!$content.length || !$toc.length) {
+      return;
+    }
+
+    var $list = $toc.find('.js-toc-list');
+    var $headings = $content.find('h2');
+    var headerOffset = 120;
+
+    // No headings -> hide the TOC and let the article go full width.
+    if (!$headings.length) {
+      $('.blog-single-toc').hide();
+      $('.blog-single-layout').addClass('no-toc');
+      return;
+    }
+
+    var items = [];
+
+    $headings.each(function (i) {
+      var $h = $(this);
+      var id = $h.attr('id');
+
+      if (!id) {
+        id = 'toc-' + (i + 1) + '-' + $.trim($h.text()).toLowerCase()
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/(^-+|-+$)/g, '');
+        $h.attr('id', id);
+      }
+
+      $list.append(
+        '<li class="toc-item"><a class="toc-link" href="#' + id +
+        '" data-target="' + id + '">' + $h.text() + '</a></li>'
+      );
+
+      items.push({ id: id, el: this, offset: 0 });
+    });
+
+    var $links = $list.find('.toc-link');
+
+    function computeOffsets() {
+      items.forEach(function (it) {
+        if (window.highltSmoother && typeof window.highltSmoother.offset === 'function') {
+          it.offset = window.highltSmoother.offset(it.el, 'top ' + headerOffset + 'px');
+        } else {
+          it.offset = $(it.el).offset().top - headerOffset;
+        }
+      });
+    }
+
+    function currentScroll() {
+      return window.highltSmoother && typeof window.highltSmoother.scrollTop === 'function'
+        ? window.highltSmoother.scrollTop()
+        : $(window).scrollTop();
+    }
+
+    function setActive() {
+      var pos = currentScroll() + 10;
+      var currentId = items[0].id;
+
+      for (var i = 0; i < items.length; i++) {
+        if (items[i].offset <= pos) {
+          currentId = items[i].id;
+        }
+      }
+
+      $links.removeClass('active');
+      $list.find('.toc-link[data-target="' + currentId + '"]').addClass('active');
+    }
+
+    // Smooth scroll to the heading (uses ScrollSmoother when present).
+    $list.on('click', '.toc-link', function (e) {
+      e.preventDefault();
+      var target = document.getElementById($(this).data('target'));
+      if (!target) return;
+
+      if (window.highltSmoother && typeof window.highltSmoother.scrollTo === 'function') {
+        window.highltSmoother.scrollTo(target, true, 'top ' + headerOffset + 'px');
+      } else {
+        $('html, body').animate({ scrollTop: $(target).offset().top - headerOffset }, 600);
+      }
+    });
+
+    computeOffsets();
+    setActive();
+
+    if (window.ScrollTrigger) {
+      // Scrollspy across the whole page.
+      ScrollTrigger.create({ start: 0, end: 'max', onUpdate: setActive });
+      ScrollTrigger.addEventListener('refreshInit', computeOffsets);
+
+      // Content height changes once images load -> recalc scroll range.
+      ScrollTrigger.refresh();
+    } else {
+      $(window).on('scroll', setActive);
+    }
+
+    $(window).on('load resize', function () {
+      computeOffsets();
+      setActive();
+      if (window.ScrollTrigger) {
+        ScrollTrigger.refresh();
+      }
+    });
+  });
+
   
 
 
